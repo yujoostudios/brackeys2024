@@ -24,6 +24,10 @@ window/size/viewport_height=720
 
 project/assembly_name="New Game Project"
 
+[global_group]
+
+items=""
+
 [gui]
 
 theme/custom_font="res://ui/press_start.tres"

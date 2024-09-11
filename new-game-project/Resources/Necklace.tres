@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=3 format=3 uid="uid://dpdfn0c4x7dpu"]
+
+[ext_resource type="Texture2D" uid="uid://dc3rtweuvx0ny" path="res://assets/pickups/📿.png" id="1_0sgad"]
+[ext_resource type="Script" path="res://scripts/ResourceType.gd" id="2_1wjgw"]
+
+[resource]
+script = ExtResource("2_1wjgw")
+item_name = "Necklace"
+value = 1000
+picture = ExtResource("1_0sgad")
