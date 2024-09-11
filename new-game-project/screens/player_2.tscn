@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx61vqhj1514a"]
+
+[ext_resource type="Texture2D" uid="uid://7ddeqhdrp1n7" path="res://assets/art/player-static.png" id="1_3v5uj"]
+[ext_resource type="Script" path="res://screens/player_2.gd" id="1_gaior"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ed5u"]
+size = Vector2(39, 19)
+
+[sub_resource type="GDScript" id="GDScript_1c002"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Player2" type="CharacterBody2D"]
+script = ExtResource("1_gaior")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3v5uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 32)
+shape = SubResource("RectangleShape2D_2ed5u")
+script = SubResource("GDScript_1c002")

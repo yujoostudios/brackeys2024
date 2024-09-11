@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://h6p7yp0erwo8"]
+
+[ext_resource type="FontFile" uid="uid://dryl8wn3vluqi" path="res://ui/VT323-Regular.ttf" id="1_ris8a"]
+
+[resource]
+base_font = ExtResource("1_ris8a")

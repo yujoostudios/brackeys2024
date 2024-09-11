@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbj54lidvkpip"]
+
+[ext_resource type="Texture2D" uid="uid://bsgwnfvs0et5m" path="res://assets/art/house-1.png" id="1_d0auk"]
+[ext_resource type="Texture2D" uid="uid://cyaqgyxjmvhx3" path="res://assets/art/house-1-door.png" id="2_8yoy1"]
+[ext_resource type="Script" path="res://screens/house_1_door.gd" id="2_h0q5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8105"]
+size = Vector2(144.5, 48)
+
+[node name="house_1" type="Node2D"]
+
+[node name="house" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="house"]
+texture = ExtResource("1_d0auk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house"]
+polygon = PackedVector2Array(-95, 125, -118, 106, -117, 9, 117, 10, 117, 108, 91, 108, -9, 108, -14, 114, -20, 125)
+
+[node name="house_1_door" type="Area2D" parent="."]
+script = ExtResource("2_h0q5a")
+
+[node name="Sprite2D" type="Sprite2D" parent="house_1_door"]
+texture = ExtResource("2_8yoy1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house_1_door"]
+position = Vector2(55, 125)
+shape = SubResource("RectangleShape2D_q8105")
+
+[connection signal="body_entered" from="house_1_door" to="house_1_door" method="_on_body_entered"]
