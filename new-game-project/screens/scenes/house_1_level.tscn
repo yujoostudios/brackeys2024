@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=13 format=4 uid="uid://cog72oekdkmda"]
 
 [ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
 [ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/flooring-night-tilemap.png" id="1_tfgr4"]
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="2_8dbuv"]
 [ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/wall-night-tilemap.png" id="2_lxy8w"]
 [ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/wallpaper-night-tilemap.png" id="3_2xkmm"]
+[ext_resource type="PackedScene" uid="uid://c2mccesqsug76" path="res://screens/objects/scroll.tscn" id="6_for0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
 texture = ExtResource("1_tfgr4")
@@ -791,9 +792,12 @@ tile_map_data = PackedByteArray("AAD3//v/AAAAAAAAAAD3//z/AAAAAAEAAAD3//3/AAAAAAE
 tile_set = SubResource("TileSet_sd61c")
 
 [node name="Necklace" parent="." instance=ExtResource("1_qqjqs")]
-position = Vector2(-197, -69)
+position = Vector2(-423, 223)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("2_8dbuv")]
 position = Vector2(-40, 193)
+
+[node name="Scroll" parent="." instance=ExtResource("6_for0x")]
+position = Vector2(309, 240)
