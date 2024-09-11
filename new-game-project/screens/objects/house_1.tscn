@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bsgwnfvs0et5m" path="res://assets/art/house-1.png" id="1_d0auk"]
 [ext_resource type="Texture2D" uid="uid://cyaqgyxjmvhx3" path="res://assets/art/house-1-door.png" id="2_8yoy1"]
-[ext_resource type="Script" path="res://screens/house_1_door.gd" id="2_h0q5a"]
+[ext_resource type="Script" path="res://scripts/house_1_door.gd" id="2_h0q5a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8105"]
 size = Vector2(144.5, 48)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cw10udmiqn8co"]
 
 [ext_resource type="Texture2D" uid="uid://ddh1jgfgedkow" path="res://assets/art/outside-map-bg.png" id="1_8gcjk"]
-[ext_resource type="PackedScene" uid="uid://bbj54lidvkpip" path="res://screens/house_1.tscn" id="2_85k0c"]
-[ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/player.tscn" id="3_uefh5"]
+[ext_resource type="PackedScene" uid="uid://bbj54lidvkpip" path="res://screens/objects/house_1.tscn" id="2_85k0c"]
+[ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="3_uefh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iig0"]
 size = Vector2(1280, 29)
