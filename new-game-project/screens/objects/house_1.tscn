@@ -27,4 +27,9 @@ texture = ExtResource("2_8yoy1")
 position = Vector2(55, 125)
 shape = SubResource("RectangleShape2D_q8105")
 
+[node name="Timer" type="Timer" parent="house_1_door"]
+wait_time = 0.105
+
 [connection signal="body_entered" from="house_1_door" to="house_1_door" method="_on_body_entered"]
+[connection signal="body_exited" from="house_1_door" to="house_1_door" method="_on_body_exited"]
+[connection signal="timeout" from="house_1_door/Timer" to="house_1_door" method="_on_timer_timeout"]
