@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=13 format=4 uid="uid://cog72oekdkmda"]
 
 [ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
 [ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/flooring-night-tilemap.png" id="1_tfgr4"]
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="2_8dbuv"]
 [ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/wall-night-tilemap.png" id="2_lxy8w"]
 [ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/wallpaper-night-tilemap.png" id="3_2xkmm"]
+[ext_resource type="PackedScene" uid="uid://c2mccesqsug76" path="res://screens/objects/scroll.tscn" id="6_3s266"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
 texture = ExtResource("1_tfgr4")
@@ -459,7 +460,7 @@ texture_region_size = Vector2i(64, 64)
 32:2/0 = 0
 39:2/0 = 0
 0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.8899, 28.1317, 28.044, 16.188, 32, 16.188, 32, 32, 15.8899, 32)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 28.0391, 28.044, 16.188, 32, 16.188, 32, 32, 16, 32)
 11:3/0 = 0
 24:3/0 = 0
 31:3/0 = 0
@@ -769,7 +770,7 @@ texture_region_size = Vector2i(64, 64)
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.9852, 32, -32, 32, -32, -32, -16.1427, -32)
 2:4/0 = 0
 3:6/0 = 0
-3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.0652, -24.5539, -27.9914, -12.3471, -32, -12.2068, -32, -32, -15.8899, -32)
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.0126, -24.0189, -27.9914, -12.3471, -32, -12.2068, -32, -32, -16.0126, -32)
 
 [sub_resource type="TileSet" id="TileSet_sd61c"]
 tile_size = Vector2i(64, 64)
@@ -791,9 +792,12 @@ tile_map_data = PackedByteArray("AAD3//v/AAAAAAAAAAD3//z/AAAAAAEAAAD3//3/AAAAAAE
 tile_set = SubResource("TileSet_sd61c")
 
 [node name="Necklace" parent="." instance=ExtResource("1_qqjqs")]
-position = Vector2(-197, -69)
+position = Vector2(-461, 225)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("2_8dbuv")]
 position = Vector2(358, 271)
+
+[node name="Scroll" parent="." instance=ExtResource("6_3s266")]
+position = Vector2(66, 219)

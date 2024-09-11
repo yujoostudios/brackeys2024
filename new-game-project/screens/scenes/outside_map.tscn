@@ -11,6 +11,7 @@ size = Vector2(1280, 29)
 size = Vector2(48, 728)
 
 [node name="OutsideMap" type="Node2D"]
+y_sort_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
