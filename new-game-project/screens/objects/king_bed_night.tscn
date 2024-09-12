@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://be3nq36scgik6"]
+
+[ext_resource type="Texture2D" uid="uid://djniljwthdd07" path="res://assets/art/furniture/KingBedNight.png" id="1_adjkc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swi7e"]
+size = Vector2(143.5, 129)
+
+[node name="KingBedNight" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_adjkc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 40.5)
+shape = SubResource("RectangleShape2D_swi7e")

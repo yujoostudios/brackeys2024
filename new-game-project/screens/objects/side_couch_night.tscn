@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci8xdnnia3bu3"]
+
+[ext_resource type="Texture2D" uid="uid://25x5kfw6ulfh" path="res://assets/art/furniture/SideCouchNight.png" id="1_tvu6q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nynsn"]
+size = Vector2(73, 127)
+
+[node name="SideCouchNight" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tvu6q")
+offset = Vector2(0, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 16.5)
+shape = SubResource("RectangleShape2D_nynsn")

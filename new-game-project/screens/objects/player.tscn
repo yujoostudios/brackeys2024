@@ -3,17 +3,18 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rppup"]
 [ext_resource type="Texture2D" uid="uid://7ddeqhdrp1n7" path="res://assets/art/player-static.png" id="2_ddswj"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_imf58"]
-radius = 12.4638
-height = 26.8451
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5lkv"]
+size = Vector2(42.9216, 44.366)
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_rppup")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 texture = ExtResource("2_ddswj")
+offset = Vector2(0, -30)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 33.8587)
-scale = Vector2(3.12906, -0.771736)
-shape = SubResource("CapsuleShape2D_imf58")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(4.50003, 3.00001)
+scale = Vector2(1.3746, 0.473335)
+shape = SubResource("RectangleShape2D_o5lkv")

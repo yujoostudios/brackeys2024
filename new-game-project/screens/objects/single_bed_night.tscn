@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0b1ecb4sekyi"]
+
+[ext_resource type="Texture2D" uid="uid://be7eejtehvae4" path="res://assets/art/furniture/SingleBedNight.png" id="1_4avt0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wc5u"]
+size = Vector2(102, 138)
+
+[node name="SingleBedNight" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4avt0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_7wc5u")
