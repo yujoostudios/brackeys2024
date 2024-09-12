@@ -1,25 +1,25 @@
-[gd_scene load_steps=24 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=24 format=4 uid="uid://chft2vh80ql34"]
 
-[ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
-[ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/tilemaps/flooring-night-tilemap.png" id="1_tfgr4"]
-[ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="2_8dbuv"]
-[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/tilemaps/wall-night-tilemap.png" id="2_lxy8w"]
-[ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/tilemaps/wallpaper-night-tilemap.png" id="3_2xkmm"]
-[ext_resource type="Texture2D" uid="uid://bnnfjglpo73cs" path="res://assets/art/furniture/BlueRugNight.png" id="3_oeexq"]
-[ext_resource type="Texture2D" uid="uid://lacx76wku0j" path="res://assets/art/furniture/GreenRugNight.png" id="4_gtsv5"]
-[ext_resource type="PackedScene" uid="uid://daa5xuivk3co0" path="res://screens/objects/couch_night.tscn" id="5_cx8l4"]
-[ext_resource type="PackedScene" uid="uid://can5jyw7gib3n" path="res://screens/objects/chair_night.tscn" id="5_pm3xp"]
-[ext_resource type="PackedScene" uid="uid://c2mccesqsug76" path="res://screens/objects/scroll.tscn" id="6_3s266"]
-[ext_resource type="PackedScene" uid="uid://be3nq36scgik6" path="res://screens/objects/king_bed_night.tscn" id="8_vt117"]
-[ext_resource type="PackedScene" uid="uid://7owgkj3rqvk5" path="res://screens/objects/long_table_night.tscn" id="9_3atmq"]
-[ext_resource type="PackedScene" uid="uid://cdlohmpyhlt1x" path="res://screens/objects/nightstand_night.tscn" id="10_brmkb"]
-[ext_resource type="PackedScene" uid="uid://bn5eotcfcn38p" path="res://screens/objects/side_chair_night.tscn" id="11_iyfut"]
-[ext_resource type="PackedScene" uid="uid://ci8xdnnia3bu3" path="res://screens/objects/side_couch_night.tscn" id="12_xfvl2"]
-[ext_resource type="PackedScene" uid="uid://b0b1ecb4sekyi" path="res://screens/objects/single_bed_night.tscn" id="13_u85vf"]
-[ext_resource type="PackedScene" uid="uid://ci1ki0ur1kpog" path="res://screens/objects/small_table_night.tscn" id="14_ey786"]
+[ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/flooring-night-tilemap.png" id="1_ukvp7"]
+[ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/wallpaper-night-tilemap.png" id="2_n8trm"]
+[ext_resource type="Texture2D" uid="uid://bnnfjglpo73cs" path="res://assets/art/furniture/BlueRugNight.png" id="3_me0nw"]
+[ext_resource type="Texture2D" uid="uid://lacx76wku0j" path="res://assets/art/furniture/GreenRugNight.png" id="4_hkork"]
+[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/wall-night-tilemap.png" id="5_b2f7q"]
+[ext_resource type="PackedScene" uid="uid://can5jyw7gib3n" path="res://screens/objects/chair_night.tscn" id="6_puol3"]
+[ext_resource type="PackedScene" uid="uid://daa5xuivk3co0" path="res://screens/objects/couch_night.tscn" id="7_62esg"]
+[ext_resource type="PackedScene" uid="uid://be3nq36scgik6" path="res://screens/objects/king_bed_night.tscn" id="8_4axq3"]
+[ext_resource type="PackedScene" uid="uid://7owgkj3rqvk5" path="res://screens/objects/long_table_night.tscn" id="9_7g7e8"]
+[ext_resource type="PackedScene" uid="uid://cdlohmpyhlt1x" path="res://screens/objects/nightstand_night.tscn" id="10_28258"]
+[ext_resource type="PackedScene" uid="uid://bn5eotcfcn38p" path="res://screens/objects/side_chair_night.tscn" id="11_xa8um"]
+[ext_resource type="PackedScene" uid="uid://ci8xdnnia3bu3" path="res://screens/objects/side_couch_night.tscn" id="12_bo07i"]
+[ext_resource type="PackedScene" uid="uid://b0b1ecb4sekyi" path="res://screens/objects/single_bed_night.tscn" id="13_eb3gi"]
+[ext_resource type="PackedScene" uid="uid://ci1ki0ur1kpog" path="res://screens/objects/small_table_night.tscn" id="14_lsind"]
+[ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="15_h4gv2"]
+[ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="16_hvvpd"]
+[ext_resource type="PackedScene" uid="uid://c2mccesqsug76" path="res://screens/objects/scroll.tscn" id="17_5dl1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
-texture = ExtResource("1_tfgr4")
+texture = ExtResource("1_ukvp7")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -49,7 +49,7 @@ tile_size = Vector2i(64, 64)
 sources/1 = SubResource("TileSetAtlasSource_vakw3")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elurg"]
-texture = ExtResource("3_2xkmm")
+texture = ExtResource("2_n8trm")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, -32, 32, -32, 32, 32, -28, 32, -28, -24)
@@ -384,7 +384,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_elurg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nja44"]
-texture = ExtResource("2_lxy8w")
+texture = ExtResource("5_b2f7q")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -20, -20, -32, 32, -32, 32, -12, -15.8244, -12.0543, -16, 32, -32, 32)
@@ -804,11 +804,11 @@ position = Vector2(394, 213)
 
 [node name="BlueRugNight" type="Sprite2D" parent="GroundFurniture"]
 position = Vector2(-105, 3)
-texture = ExtResource("3_oeexq")
+texture = ExtResource("3_me0nw")
 
 [node name="GreenRugNight" type="Sprite2D" parent="GroundFurniture"]
 position = Vector2(-872, -339)
-texture = ExtResource("4_gtsv5")
+texture = ExtResource("4_hkork")
 
 [node name="Wall" type="TileMapLayer" parent="."]
 z_index = 1
@@ -821,57 +821,57 @@ z_index = 2
 y_sort_enabled = true
 position = Vector2(-479, -126)
 
-[node name="ChairNight" parent="Furniture" instance=ExtResource("5_pm3xp")]
+[node name="ChairNight" parent="Furniture" instance=ExtResource("6_puol3")]
 position = Vector2(455, 312)
 
-[node name="ChairNight2" parent="Furniture" instance=ExtResource("5_pm3xp")]
+[node name="ChairNight2" parent="Furniture" instance=ExtResource("6_puol3")]
 position = Vector2(535, 312)
 
-[node name="CouchNight" parent="Furniture" instance=ExtResource("5_cx8l4")]
+[node name="CouchNight" parent="Furniture" instance=ExtResource("7_62esg")]
 position = Vector2(749, 274)
 
-[node name="KingBedNight" parent="Furniture" instance=ExtResource("8_vt117")]
+[node name="KingBedNight" parent="Furniture" instance=ExtResource("8_4axq3")]
 position = Vector2(-3, 325)
 
-[node name="LongTableNight" parent="Furniture" instance=ExtResource("9_3atmq")]
+[node name="LongTableNight" parent="Furniture" instance=ExtResource("9_7g7e8")]
 position = Vector2(498, 389)
 
-[node name="NightstandNight" parent="Furniture" instance=ExtResource("10_brmkb")]
+[node name="NightstandNight" parent="Furniture" instance=ExtResource("10_28258")]
 position = Vector2(1004, -38)
 
-[node name="NightstandNight2" parent="Furniture" instance=ExtResource("10_brmkb")]
+[node name="NightstandNight2" parent="Furniture" instance=ExtResource("10_28258")]
 position = Vector2(1004, 377)
 
-[node name="SideChairNight" parent="Furniture" instance=ExtResource("11_iyfut")]
+[node name="SideChairNight" parent="Furniture" instance=ExtResource("11_xa8um")]
 position = Vector2(406, 376)
 
-[node name="SideChairNight2" parent="Furniture" instance=ExtResource("11_iyfut")]
+[node name="SideChairNight2" parent="Furniture" instance=ExtResource("11_xa8um")]
 position = Vector2(593, 371)
 scale = Vector2(-1, 1)
 
-[node name="SideCouchNight" parent="Furniture" instance=ExtResource("12_xfvl2")]
+[node name="SideCouchNight" parent="Furniture" instance=ExtResource("12_bo07i")]
 position = Vector2(615, -38)
 scale = Vector2(-1, 1)
 
-[node name="SingleBedNight" parent="Furniture" instance=ExtResource("13_u85vf")]
+[node name="SingleBedNight" parent="Furniture" instance=ExtResource("13_eb3gi")]
 position = Vector2(-18, -58)
 
-[node name="SmallTableNight" parent="Furniture" instance=ExtResource("14_ey786")]
+[node name="SmallTableNight" parent="Furniture" instance=ExtResource("14_lsind")]
 position = Vector2(821, -10)
 
-[node name="Necklace" parent="." instance=ExtResource("1_qqjqs")]
+[node name="Necklace" parent="." instance=ExtResource("15_h4gv2")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(-360, 242)
+position = Vector2(-335, 244)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 2
 
-[node name="Player" parent="." instance=ExtResource("2_8dbuv")]
+[node name="Player" parent="." instance=ExtResource("16_hvvpd")]
 z_index = 2
 position = Vector2(386, 270)
 
-[node name="Scroll" parent="." instance=ExtResource("6_3s266")]
+[node name="Scroll" parent="." instance=ExtResource("17_5dl1f")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(443, -124)
+position = Vector2(456, -121)
