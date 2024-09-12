@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=4 uid="uid://chft2vh80ql34"]
 
-[ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/flooring-night-tilemap.png" id="1_ukvp7"]
+[ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/tilemaps/flooring-night-tilemap.png" id="1_ukvp7"]
 [ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/wallpaper-night-tilemap.png" id="2_n8trm"]
 [ext_resource type="Texture2D" uid="uid://bnnfjglpo73cs" path="res://assets/art/furniture/BlueRugNight.png" id="3_me0nw"]
 [ext_resource type="Texture2D" uid="uid://lacx76wku0j" path="res://assets/art/furniture/GreenRugNight.png" id="4_hkork"]

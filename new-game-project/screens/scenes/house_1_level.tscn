@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=25 format=4 uid="uid://cog72oekdkmda"]
 
 [ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
 [ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/tilemaps/flooring-night-tilemap.png" id="1_tfgr4"]
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="2_8dbuv"]
-[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/tilemaps/wall-night-tilemap.png" id="2_lxy8w"]
-[ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/tilemaps/wallpaper-night-tilemap.png" id="3_2xkmm"]
+[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/wall-night-tilemap.png" id="2_lxy8w"]
+[ext_resource type="Texture2D" uid="uid://cvek0b51fiu5a" path="res://assets/art/wallpaper-night-tilemap.png" id="3_2xkmm"]
 [ext_resource type="Texture2D" uid="uid://bnnfjglpo73cs" path="res://assets/art/furniture/BlueRugNight.png" id="3_oeexq"]
 [ext_resource type="Texture2D" uid="uid://lacx76wku0j" path="res://assets/art/furniture/GreenRugNight.png" id="4_gtsv5"]
 [ext_resource type="PackedScene" uid="uid://daa5xuivk3co0" path="res://screens/objects/couch_night.tscn" id="5_cx8l4"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ci8xdnnia3bu3" path="res://screens/objects/side_couch_night.tscn" id="12_xfvl2"]
 [ext_resource type="PackedScene" uid="uid://b0b1ecb4sekyi" path="res://screens/objects/single_bed_night.tscn" id="13_u85vf"]
 [ext_resource type="PackedScene" uid="uid://ci1ki0ur1kpog" path="res://screens/objects/small_table_night.tscn" id="14_ey786"]
+[ext_resource type="AudioStream" uid="uid://da2ovdnv0cw7t" path="res://assets/music/sneaking-music.mp3" id="18_pxhl2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
 texture = ExtResource("1_tfgr4")
@@ -875,3 +876,7 @@ position = Vector2(386, 270)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(443, -124)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_pxhl2")
+autoplay = true
