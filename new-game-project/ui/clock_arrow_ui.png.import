@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpphgvnjd8fvf"
-path="res://.godot/imported/player-walking-sprites.png-1780d7e6de9ccecc003d9a3f2d1ff408.ctex"
+uid="uid://0ym82x8adcis"
+path="res://.godot/imported/clock_arrow_ui.png-208d4c80953907a0a01fee564a05d922.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/sprite sheets/player-walking-sprites.png"
-dest_files=["res://.godot/imported/player-walking-sprites.png-1780d7e6de9ccecc003d9a3f2d1ff408.ctex"]
+source_file="res://ui/clock_arrow_ui.png"
+dest_files=["res://.godot/imported/clock_arrow_ui.png-208d4c80953907a0a01fee564a05d922.ctex"]
 
 [params]
 

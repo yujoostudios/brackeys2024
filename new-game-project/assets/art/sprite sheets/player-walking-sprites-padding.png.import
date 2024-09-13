@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpphgvnjd8fvf"
-path="res://.godot/imported/player-walking-sprites.png-1780d7e6de9ccecc003d9a3f2d1ff408.ctex"
+uid="uid://bt5rf25k7xo6a"
+path="res://.godot/imported/player-walking-sprites-padding.png-9db3b2013545363a95f64c5d7a36ff7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/sprite sheets/player-walking-sprites.png"
-dest_files=["res://.godot/imported/player-walking-sprites.png-1780d7e6de9ccecc003d9a3f2d1ff408.ctex"]
+source_file="res://assets/art/sprite sheets/player-walking-sprites-padding.png"
+dest_files=["res://.godot/imported/player-walking-sprites-padding.png-9db3b2013545363a95f64c5d7a36ff7c.ctex"]
 
 [params]
 

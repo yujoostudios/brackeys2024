@@ -1,13 +1,103 @@
-[gd_scene load_steps=7 format=3 uid="uid://d01luah7ejh3g"]
+[gd_scene load_steps=14 format=3 uid="uid://d01luah7ejh3g"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rppup"]
-[ext_resource type="Texture2D" uid="uid://djlmc4xnatfiq" path="res://assets/art/sprite sheets/player-walking-sprites.png" id="2_qvpag"]
+[ext_resource type="Texture2D" uid="uid://bva7k7mkiw0ov" path="res://assets/art/sprite sheets/player-same-left-right-collision.png" id="2_hnkna"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5lkv"]
-size = Vector2(42.9216, 44.366)
+size = Vector2(35.6467, 25.352)
 
-[sub_resource type="Animation" id="Animation_e8u1y"]
+[sub_resource type="Animation" id="Animation_63fqw"]
+resource_name = "WalkDownRight"
+length = 1.8
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 5), Vector2i(1, 5), Vector2i(2, 5), Vector2i(3, 5), Vector2i(4, 5), Vector2i(5, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_k1fio"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_mg14o"]
+resource_name = "WalkDownLeft"
+length = 1.8
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 4), Vector2i(1, 4), Vector2i(2, 4), Vector2i(3, 4), Vector2i(4, 4), Vector2i(5, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_opvds"]
+resource_name = "WalkUpRight"
+length = 1.8
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 6), Vector2i(1, 6), Vector2i(2, 6), Vector2i(3, 6), Vector2i(4, 6), Vector2i(5, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_fupce"]
+resource_name = "WalkUpLeft"
+length = 1.8
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7), Vector2i(4, 7), Vector2i(5, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_lrcdo"]
+resource_name = "IdleDownRight"
+length = 0.3
+loop_mode = 1
+step = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -21,9 +111,11 @@ tracks/0/keys = {
 "values": [Vector2i(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_i2ila"]
-resource_name = "WalkDownRight"
-step = 0.2
+[sub_resource type="Animation" id="Animation_wtjnt"]
+resource_name = "IdleDownLeft"
+length = 0.3
+loop_mode = 1
+step = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -31,16 +123,59 @@ tracks/0/path = NodePath("PlayerImage:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
+"values": [Vector2i(0, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_u5vtt"]
+[sub_resource type="Animation" id="Animation_7fj16"]
+resource_name = "IdleUpRight"
+length = 0.3
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_j4ln4"]
+resource_name = "IdleUpLeft"
+length = 0.3
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0dt8"]
 _data = {
-"RESET": SubResource("Animation_e8u1y"),
-"WalkDownLeft": SubResource("Animation_i2ila")
+"IdleDownLeft": SubResource("Animation_wtjnt"),
+"IdleDownRight": SubResource("Animation_lrcdo"),
+"IdleUpLeft": SubResource("Animation_j4ln4"),
+"IdleUpRight": SubResource("Animation_7fj16"),
+"RESET": SubResource("Animation_k1fio"),
+"WalkDownLeft": SubResource("Animation_mg14o"),
+"WalkDownRight": SubResource("Animation_63fqw"),
+"WalkUpLeft": SubResource("Animation_fupce"),
+"WalkUpRight": SubResource("Animation_opvds")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -48,17 +183,18 @@ y_sort_enabled = true
 script = ExtResource("1_rppup")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
-texture = ExtResource("2_qvpag")
+texture = ExtResource("2_hnkna")
 offset = Vector2(0, -30)
 hframes = 9
-vframes = 6
+vframes = 8
+frame = 45
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(4.50003, 3.00001)
+position = Vector2(4.5, 9)
 scale = Vector2(1.3746, 0.473335)
 shape = SubResource("RectangleShape2D_o5lkv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_u5vtt")
+"": SubResource("AnimationLibrary_t0dt8")
 }

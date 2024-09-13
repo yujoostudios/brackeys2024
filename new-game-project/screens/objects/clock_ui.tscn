@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy8bfjy2culrp"]
+
+[ext_resource type="Texture2D" uid="uid://dlsf1donxvboo" path="res://ui/time_visual_ui.png" id="1_axvks"]
+[ext_resource type="Script" path="res://screens/objects/clock_ui.gd" id="1_vw5iy"]
+[ext_resource type="Texture2D" uid="uid://0ym82x8adcis" path="res://ui/clock_arrow_ui.png" id="2_q57tk"]
+[ext_resource type="Texture2D" uid="uid://csnehgism43yn" path="res://ui/clock_ui.png" id="3_cprrs"]
+
+[node name="ClockUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vw5iy")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="TimeVisual" type="Sprite2D" parent="."]
+texture = ExtResource("1_axvks")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+texture = ExtResource("2_q57tk")
+
+[node name="Clock" type="Sprite2D" parent="."]
+texture = ExtResource("3_cprrs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -28.0
+offset_top = 14.0
+offset_right = 28.0
+offset_bottom = 39.0
+alignment = 1
+
+[node name="TimerLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "1:05"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

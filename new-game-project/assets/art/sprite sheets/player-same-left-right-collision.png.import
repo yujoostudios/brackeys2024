@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpphgvnjd8fvf"
-path="res://.godot/imported/player-walking-sprites.png-1780d7e6de9ccecc003d9a3f2d1ff408.ctex"
+uid="uid://bva7k7mkiw0ov"
+path="res://.godot/imported/player-same-left-right-collision.png-bbf1dba39da5c963767bbf111893ff43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/sprite sheets/player-walking-sprites.png"
-dest_files=["res://.godot/imported/player-walking-sprites.png-1780d7e6de9ccecc003d9a3f2d1ff408.ctex"]
+source_file="res://assets/art/sprite sheets/player-same-left-right-collision.png"
+dest_files=["res://.godot/imported/player-same-left-right-collision.png-bbf1dba39da5c963767bbf111893ff43.ctex"]
 
 [params]
 
