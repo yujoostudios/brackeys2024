@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://du4pp41sryjas"]
+[gd_resource type="Resource" script_class="PowerUpType" load_steps=2 format=3 uid="uid://du4pp41sryjas"]
 
 [ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_05dki"]
 
 [resource]
 script = ExtResource("1_05dki")
-item_name = "Ruby Ring"
+name = "Ruby Ring"
 value = 1500
 highlight_pic = "res://assets/art/stealables/RubyRingNightOutline.png"
 regular_pic = "res://assets/art/stealables/RubyRingNight.png"

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://dpdfn0c4x7dpu"]
+[gd_resource type="Resource" script_class="PowerUpType" load_steps=2 format=3 uid="uid://dpdfn0c4x7dpu"]
 
 [ext_resource type="Script" path="res://scripts/ResourceType.gd" id="2_1wjgw"]
 
 [resource]
 script = ExtResource("2_1wjgw")
-item_name = "Necklace"
-value = 1000
+name = "Necklace"
+value = 400
 highlight_pic = "res://assets/art/stealables/PearlNecklaceNightOutline.png"
 regular_pic = "res://assets/art/stealables/PearlNecklaceNight.png"

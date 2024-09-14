@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://b6tfdjou3uk2k"]
+[gd_resource type="Resource" script_class="PowerUpType" load_steps=2 format=3 uid="uid://b6tfdjou3uk2k"]
 
 [ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_4f0rc"]
 
 [resource]
 script = ExtResource("1_4f0rc")
-item_name = "Laptop"
-value = 1000
+name = "Laptop"
+value = 1500
 highlight_pic = "res://assets/art/stealables/LaptopNightOutline.png"
 regular_pic = "res://assets/art/stealables/LaptopNight.png"
