@@ -2,7 +2,7 @@ extends Area2D
 
 class_name pickup
 @export var node_type : ResourceNodeType
-
+signal money_change
 
 func _on_body_entered(body: Node2D) -> void:
 	$Timer.start()
@@ -14,10 +14,9 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	if Input.is_action_pressed("interact"):
-		global.total_money = global.total_money + node_type.value
+		emit_signal("money_change", node_type.value)
 		queue_free()
-
-
+	
 func _on_area_entered(area: Area2D) -> void:
 	$Timer.start()
 	print(node_type.item_name)

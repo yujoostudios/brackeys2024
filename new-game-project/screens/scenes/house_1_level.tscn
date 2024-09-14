@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=35 format=4 uid="uid://cog72oekdkmda"]
 
 [ext_resource type="Script" path="res://screens/scenes/house_1_level.gd" id="1_ayq44"]
 [ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bvv53m0y4dao0" path="res://screens/objects/baby_and_crib.tscn" id="16_sq1ho"]
 [ext_resource type="AudioStream" uid="uid://da2ovdnv0cw7t" path="res://assets/music/sneaking-music.mp3" id="18_pxhl2"]
 [ext_resource type="PackedScene" uid="uid://djet31iygecq1" path="res://ui/ui.tscn" id="19_vigtb"]
+[ext_resource type="PackedScene" uid="uid://dvjqj0mfgngys" path="res://screens/objects/Money.tscn" id="21_k5d5m"]
+[ext_resource type="PackedScene" uid="uid://c2mcxy43kiluh" path="res://screens/objects/computer.tscn" id="23_3y62m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
 texture = ExtResource("1_tfgr4")
@@ -816,7 +818,7 @@ size = Vector2(496, 89.875)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bghl0"]
 size = Vector2(222, 344)
 
-[node name="House1Level" type="Node2D"]
+[node name="House1Level" type="Node2D" groups=["house"]]
 y_sort_enabled = true
 script = ExtResource("1_ayq44")
 
@@ -919,7 +921,18 @@ position = Vector2(1439, -26)
 [node name="Necklace" parent="." instance=ExtResource("1_qqjqs")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(-360, 242)
+position = Vector2(968, 827)
+
+[node name="Scroll" parent="." instance=ExtResource("6_3s266")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(853, 789)
+
+[node name="Computer" parent="." instance=ExtResource("23_3y62m")]
+position = Vector2(1142, 826)
+
+[node name="Money" parent="." instance=ExtResource("21_k5d5m")]
+position = Vector2(1190, 1008)
 
 [node name="Player" parent="." instance=ExtResource("2_8dbuv")]
 z_index = 2
@@ -933,11 +946,6 @@ limit_bottom = 1280
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
-
-[node name="Scroll" parent="." instance=ExtResource("6_3s266")]
-z_index = 2
-y_sort_enabled = true
-position = Vector2(456, 96)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(952, -168)
@@ -971,3 +979,5 @@ position = Vector2(-3024, 48)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D4"]
 position = Vector2(2744, 1492)
 shape = SubResource("RectangleShape2D_bghl0")
+
+[connection signal="money_change" from="Necklace" to="CanvasLayer/UI" method="_on_necklace_money_change"]

@@ -8,9 +8,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	animate()
+	var house1level = get_tree().get_first_node_in_group("house")
+	house1level.connect("send_noise_value", self.animate)
 	pass
 
-func animate():
-	if global.noise_meter_value > 99:
+func animate(value : int):
+	if value > 99:
 		$AnimationPlayer.play("crying")

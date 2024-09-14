@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=3 format=3 uid="uid://cr2p60m3f6y5d"]
+
+[ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_40a74"]
+[ext_resource type="Texture2D" uid="uid://c070wqhkdtlyi" path="res://assets/pickups/🖥️.png" id="1_trieg"]
+
+[resource]
+script = ExtResource("1_40a74")
+item_name = "Computer"
+value = 2000
+picture = ExtResource("1_trieg")

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=3 format=3 uid="uid://bl5ey3fufmbv6"]
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://bl5ey3fufmbv6"]
 
 [ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_jnou4"]
-[ext_resource type="Texture2D" uid="uid://bn8bmwi0h8ohh" path="res://assets/pickups/📜.png" id="1_rpu56"]
 
 [resource]
 script = ExtResource("1_jnou4")
 item_name = "Scroll"
 value = 500
-picture = ExtResource("1_rpu56")
+highlight_pic = ""
+regular_pic = "res://assets/pickups/📜.png"

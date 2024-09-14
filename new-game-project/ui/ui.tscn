@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cy8bfjy2culrp" path="res://ui/clock_ui.tscn" id="1_n50nv"]
 [ext_resource type="PackedScene" uid="uid://xnkth15cf6kq" path="res://ui/noise_meter_money_ui.tscn" id="2_m8lan"]
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" groups=["asd"]]
 z_index = 3
 layout_mode = 3
 anchors_preset = 10
@@ -19,7 +19,7 @@ offset_top = 88.0
 offset_right = 88.0
 offset_bottom = 288.0
 
-[node name="NoiseMeterMoneyUI" parent="." instance=ExtResource("2_m8lan")]
+[node name="NoiseMeterMoneyUI" parent="." groups=["items"] instance=ExtResource("2_m8lan")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
