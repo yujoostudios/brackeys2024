@@ -4,7 +4,7 @@ var currMinutes
 var currSeconds
 
 @export var startMinutes = 0
-@export var startSeconds = 45
+@export var startSeconds = 0
 
 signal time_over
 # Called when the node enters the scene tree for the first time.

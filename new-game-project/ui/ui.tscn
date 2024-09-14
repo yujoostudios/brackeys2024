@@ -18,6 +18,7 @@ offset_left = 88.0
 offset_top = 88.0
 offset_right = 88.0
 offset_bottom = 288.0
+startMinutes = 3
 startSeconds = 3
 
 [node name="NoiseMeterMoneyUI" parent="." groups=["items"] instance=ExtResource("2_m8lan")]

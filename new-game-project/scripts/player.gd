@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var animations = $AnimationPlayer
 var ydirection = "Down"
 var xdirection = "Right"
+var speedPowerUpActivated
 
 const DASH_SPEED = 275
 var dashing = false

@@ -7,19 +7,6 @@ signal money_change
 func _ready() -> void:
 	$Sprite2D.texture = load(node_type.regular_pic)
 
-#func _on_body_entered(body: Node2D) -> void:
-	#if body.name == "Player":
-		#$Sprite2D.texture = load(node_type.highlight_pic)
-		#$Timer.start()
-		#print(node_type.item_name)
-		#print(node_type.value)
-
-	
-#func _on_body_exited(body: Node2D) -> void:
-	#if body.name == "Player":
-		#$Sprite2D.texture = load(node_type.regular_pic)
-		#$Timer.stop()
-
 func _on_timer_timeout() -> void:
 	if Input.is_action_pressed("interact"):
 		emit_signal("money_change", node_type.value)

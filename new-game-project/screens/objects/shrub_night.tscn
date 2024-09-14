@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c25kv35tdq1ra"]
+
+[ext_resource type="Texture2D" uid="uid://y8addch2dnf2" path="res://assets/art/ShrubNight.png" id="1_ejtrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_va368"]
+size = Vector2(139.673, 117.657)
+
+[node name="Shrub" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ejtrl")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 14)
+scale = Vector2(0.859147, 0.492958)
+shape = SubResource("RectangleShape2D_va368")
