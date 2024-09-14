@@ -4,9 +4,9 @@ extends CharacterBody2D
 @onready var animations = $AnimationPlayer
 var ydirection = "Down"
 var xdirection = "Right"
-var speedPowerUpActivated
+var speedPowerUpActivated = false
 
-const DASH_SPEED = 275
+var dash_speed = 275
 var dashing = false
 var can_dash = true
 var can_move = true
@@ -20,14 +20,18 @@ func _process(delta: float) -> void:
 	var house_doors = get_tree().get_nodes_in_group("house_doors")
 	# house_doors will be empty upon entering any level because new tree node
 	if house_doors.is_empty():
-		print('door')
+		#print('door')
 		level_entered = true
 		
 	if level_entered:
-		print("level entered")
+		#print("level entered")
 		var houses = get_tree().get_nodes_in_group("house")
 		for house in houses:
 			house.connect("stop_player_movement", self._stop_movement_flag)
+			
+	var powerups = get_tree().get_nodes_in_group("powerups")
+	for powerup in powerups:
+		powerup.connect("SpeedPowerUpActivate", self._speed_powerup_activated)
 	
 	if (can_move):
 		var direction = Input.get_vector("left", "right", "up", "down")
@@ -38,7 +42,7 @@ func _process(delta: float) -> void:
 			$CanDashTimer.start()
 			
 		if dashing:
-			velocity = direction * DASH_SPEED
+			velocity = direction * dash_speed
 		else: 
 			velocity = direction * speed
 		move_and_slide()
@@ -68,6 +72,17 @@ func _stop_movement_flag(flag : bool):
 func _on_dash_timer_timeout() -> void:
 	dashing = false
 
-
 func _on_can_dash_timer_timeout() -> void:
 	can_dash = true
+	
+func _speed_powerup_activated():
+	$SpeedPowerUpTimer.start()
+	speedPowerUpActivated = true
+	dash_speed += 200
+	speed += 200
+	
+func _on_speed_power_up_timer_timeout() -> void:
+	speedPowerUpActivated = false
+	dash_speed -= 200
+	speed -= 200
+	$SpeedPowerUpTimer.stop()

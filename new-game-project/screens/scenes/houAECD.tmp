@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=42 format=4 uid="uid://cog72oekdkmda"]
 
 [ext_resource type="Script" path="res://scripts/house_level.gd" id="1_ayq44"]
 [ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
@@ -21,9 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://ci1ki0ur1kpog" path="res://screens/objects/small_table_night.tscn" id="14_ey786"]
 [ext_resource type="PackedScene" uid="uid://bvv53m0y4dao0" path="res://screens/objects/baby_and_crib.tscn" id="16_sq1ho"]
 [ext_resource type="AudioStream" uid="uid://da2ovdnv0cw7t" path="res://assets/music/sneaking-music.mp3" id="18_pxhl2"]
-[ext_resource type="PackedScene" uid="uid://cu5417sfct3nn" path="res://screens/objects/arm_chair_side.tscn" id="19_fx2b3"]
 [ext_resource type="PackedScene" uid="uid://djet31iygecq1" path="res://ui/ui.tscn" id="19_vigtb"]
-[ext_resource type="PackedScene" uid="uid://du6rmwnkkpomk" path="res://screens/objects/house_plant.tscn" id="20_47i0x"]
 [ext_resource type="PackedScene" uid="uid://drnykdmtclwda" path="res://screens/objects/tv.tscn" id="22_6fu07"]
 [ext_resource type="PackedScene" uid="uid://cn0ouodtw0siu" path="res://screens/objects/dog_bone.tscn" id="22_era6i"]
 [ext_resource type="PackedScene" uid="uid://c2mcxy43kiluh" path="res://screens/objects/computer.tscn" id="23_3y62m"]
@@ -33,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://il6rvfxu27da" path="res://screens/objects/ruby_ring.tscn" id="28_ivcle"]
 [ext_resource type="PackedScene" uid="uid://cf8a20y6wkuv7" path="res://screens/scenes/game_over.tscn" id="29_kgccn"]
 [ext_resource type="PackedScene" uid="uid://dnmecqkcmodxy" path="res://screens/objects/speed_powerup.tscn" id="30_hhsgm"]
-[ext_resource type="PackedScene" uid="uid://cy8dwgkouuauh" path="res://screens/objects/time_powerup.tscn" id="32_pwlhr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
 texture = ExtResource("1_tfgr4")
@@ -858,15 +855,11 @@ position = Vector2(-366, -77)
 texture = ExtResource("3_oeexq")
 
 [node name="GreenRugNight" type="Sprite2D" parent="GroundFurniture"]
-position = Vector2(-1358, -141)
-texture = ExtResource("4_gtsv5")
-
-[node name="GreenRugNight3" type="Sprite2D" parent="GroundFurniture"]
-position = Vector2(170, -229)
+position = Vector2(-1238, -61)
 texture = ExtResource("4_gtsv5")
 
 [node name="GreenRugNight2" type="Sprite2D" parent="GroundFurniture"]
-position = Vector2(-366, -957)
+position = Vector2(-366, -917)
 texture = ExtResource("4_gtsv5")
 
 [node name="Wall" type="TileMapLayer" parent="."]
@@ -887,10 +880,7 @@ position = Vector2(1063, 1014)
 position = Vector2(1127, 1014)
 
 [node name="CouchNight" parent="Furniture" instance=ExtResource("5_cx8l4")]
-position = Vector2(104, 869)
-
-[node name="CouchNight2" parent="Furniture" instance=ExtResource("5_cx8l4")]
-position = Vector2(1567, -34)
+position = Vector2(215, 950)
 
 [node name="KingBedNight" parent="Furniture" instance=ExtResource("8_vt117")]
 position = Vector2(175, -26)
@@ -899,7 +889,7 @@ position = Vector2(175, -26)
 position = Vector2(1095, 1070)
 
 [node name="LongTableNight2" parent="Furniture" instance=ExtResource("9_3atmq")]
-position = Vector2(1775, 462)
+position = Vector2(1095, 1070)
 
 [node name="LongTableNight3" parent="Furniture" instance=ExtResource("9_3atmq")]
 position = Vector2(-169, 462)
@@ -920,84 +910,34 @@ position = Vector2(1007, 1046)
 position = Vector2(1183, 1046)
 scale = Vector2(-1, 1)
 
+[node name="SideCouchNight" parent="Furniture" instance=ExtResource("12_xfvl2")]
+position = Vector2(359, 1102)
+scale = Vector2(-1, 1)
+
 [node name="SideCouchNight5" parent="Furniture" instance=ExtResource("12_xfvl2")]
-position = Vector2(1199, 262)
+position = Vector2(1215, 326)
 scale = Vector2(-1, 1)
 
 [node name="SideCouchNight2" parent="Furniture" instance=ExtResource("12_xfvl2")]
-position = Vector2(-41, 1014)
+position = Vector2(63, 1102)
 
 [node name="SideCouchNight4" parent="Furniture" instance=ExtResource("12_xfvl2")]
-position = Vector2(991, 262)
+position = Vector2(983, 318)
 
 [node name="SingleBedNight" parent="Furniture" instance=ExtResource("13_u85vf")]
 position = Vector2(1223, 6)
 
 [node name="SmallTableNight" parent="Furniture" instance=ExtResource("14_ey786")]
-position = Vector2(247, 870)
+position = Vector2(359, 950)
 
 [node name="SmallTableNight2" parent="Furniture" instance=ExtResource("14_ey786")]
-position = Vector2(-41, 870)
+position = Vector2(63, 950)
 
 [node name="BabyAndCrib" parent="Furniture" instance=ExtResource("16_sq1ho")]
 position = Vector2(1439, -26)
 
 [node name="SideCouchNight3" parent="Furniture" instance=ExtResource("12_xfvl2")]
 position = Vector2(1831, -2)
-scale = Vector2(-1, 1)
-
-[node name="ArmChairSide" parent="Furniture" instance=ExtResource("19_fx2b3")]
-position = Vector2(247, 974)
-
-[node name="ArmChairSide3" parent="Furniture" instance=ExtResource("19_fx2b3")]
-position = Vector2(1791, 918)
-
-[node name="ArmChairSide2" parent="Furniture" instance=ExtResource("19_fx2b3")]
-position = Vector2(247, 1062)
-
-[node name="ArmChairSide4" parent="Furniture" instance=ExtResource("19_fx2b3")]
-position = Vector2(1503, 918)
-scale = Vector2(-1, 1)
-
-[node name="HousePlant" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(919, 1270)
-
-[node name="HousePlant2" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(1775, 838)
-scale = Vector2(-1, 1)
-
-[node name="HousePlant3" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(1511, 838)
-
-[node name="HousePlant4" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(319, 862)
-scale = Vector2(-1, 1)
-
-[node name="HousePlant5" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(-121, 862)
-
-[node name="HousePlant6" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(-217, 1270)
-
-[node name="HousePlant7" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(743, 1278)
-scale = Vector2(-1, 1)
-
-[node name="HousePlant8" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(-25, -50)
-
-[node name="HousePlant9" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(527, -58)
-scale = Vector2(-1, 1)
-
-[node name="HousePlant10" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(607, -58)
-
-[node name="HousePlant11" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(919, 446)
-
-[node name="HousePlant12" parent="Furniture" instance=ExtResource("20_47i0x")]
-position = Vector2(1255, 446)
 scale = Vector2(-1, 1)
 
 [node name="StealableItemsBottom" type="Node2D" parent="."]
@@ -1058,7 +998,7 @@ z_index = 2
 y_sort_enabled = true
 
 [node name="TV" parent="StealableItemsYSort" instance=ExtResource("22_6fu07")]
-position = Vector2(616, 24)
+position = Vector2(616, 56)
 
 [node name="Vase" parent="StealableItemsYSort" instance=ExtResource("23_mu71f")]
 position = Vector2(448, 592)
@@ -1070,7 +1010,7 @@ position = Vector2(-24, -168)
 position = Vector2(256, 592)
 
 [node name="Laptop" parent="StealableItemsYSort" instance=ExtResource("25_b6lpd")]
-position = Vector2(-400, 752)
+position = Vector2(-288, 832)
 
 [node name="SteablleItemsTop" type="Node2D" parent="."]
 z_index = 3
@@ -1082,7 +1022,7 @@ position = Vector2(664, 896)
 position = Vector2(-192, -192)
 
 [node name="RubyRing" parent="SteablleItemsTop" instance=ExtResource("28_ivcle")]
-position = Vector2(1056, -160)
+position = Vector2(1344, -152)
 
 [node name="Computer" parent="SteablleItemsTop" instance=ExtResource("23_3y62m")]
 position = Vector2(-608, 256)
@@ -1095,8 +1035,5 @@ z_index = 4
 
 [node name="SpeedPowerup" parent="." groups=["powerups"] instance=ExtResource("30_hhsgm")]
 position = Vector2(1179, 930)
-
-[node name="TimePowerUp" parent="." groups=["powerups"] instance=ExtResource("32_pwlhr")]
-position = Vector2(955, 889)
 
 [connection signal="money_change" from="SteablleItemsTop/Necklace" to="CanvasLayer/UI" method="_on_necklace_money_change"]

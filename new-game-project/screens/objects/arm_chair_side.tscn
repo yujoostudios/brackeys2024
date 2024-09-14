@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu5417sfct3nn"]
+
+[ext_resource type="Texture2D" uid="uid://b67iifs4agfg5" path="res://assets/art/furniture/ArmchairSide.png" id="1_u4sng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb5mc"]
+size = Vector2(84, 65)
+
+[node name="ArmChairSide" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u4sng")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_eb5mc")

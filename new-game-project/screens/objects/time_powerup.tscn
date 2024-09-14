@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy8dwgkouuauh"]
+
+[ext_resource type="Script" path="res://screens/objects/time_powerup.gd" id="1_apu3i"]
+[ext_resource type="Texture2D" uid="uid://dl1svjxsdrwli" path="res://assets/art/sprite sheets/time-powerup-sprites.png" id="2_8evrt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2el4"]
+radius = 30.0
+height = 98.0
+
+[sub_resource type="Animation" id="Animation_ahktx"]
+resource_name = "FloatSparkle"
+length = 4.2
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 3.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0), Vector2i(7, 0), Vector2i(8, 0), Vector2i(9, 0), Vector2i(10, 0), Vector2i(11, 0), Vector2i(12, 0), Vector2i(13, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gdsya"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d2xun"]
+_data = {
+"FloatSparkle": SubResource("Animation_ahktx"),
+"RESET": SubResource("Animation_gdsya")
+}
+
+[node name="TimePowerUp" type="Area2D"]
+z_index = 2
+y_sort_enabled = true
+script = ExtResource("1_apu3i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -10)
+texture = ExtResource("2_8evrt")
+offset = Vector2(0, -20)
+hframes = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -28)
+shape = SubResource("CapsuleShape2D_x2el4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d2xun")
+}
+autoplay = "FloatSparkle"
+speed_scale = 1.5
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://il6rvfxu27da"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_inkdi"]
-[ext_resource type="Resource" uid="uid://chdys08g8hi23" path="res://Resources/Items/passport.tres" id="2_0u3x6"]
+[ext_resource type="Resource" uid="uid://du4pp41sryjas" path="res://Resources/Items/ruby_ring.tres" id="2_dwobj"]
 [ext_resource type="Texture2D" uid="uid://cog8i3bmrrw1u" path="res://assets/art/stealables/RubyRingNight.png" id="3_ecypf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxoyi"]
@@ -10,7 +10,7 @@ size = Vector2(53, 44)
 [node name="RubyRing" type="Area2D" groups=["items"]]
 position = Vector2(-1, -3)
 script = ExtResource("1_inkdi")
-node_type = ExtResource("2_0u3x6")
+node_type = ExtResource("2_dwobj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)

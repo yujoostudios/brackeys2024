@@ -5,13 +5,13 @@ extends Area2D
 signal house1_entered
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		print("body entered")
+		#print("body entered")
 		$Sprite2D.texture = load(door_type.highlight)
 		$Timer.start()
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		print("body exited")
+		#print("body exited")
 		$Sprite2D.texture = load(door_type.base_door)
 		$Timer.stop()
 		

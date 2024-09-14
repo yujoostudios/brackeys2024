@@ -36,6 +36,7 @@ clock=""
 game_over=""
 player=""
 house_doors=""
+powerups=""
 
 [gui]
 

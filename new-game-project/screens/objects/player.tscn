@@ -9,6 +9,74 @@ size = Vector2(35.6467, 38.028)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fmi2"]
 size = Vector2(76.6601, 210.985)
 
+[sub_resource type="Animation" id="Animation_f7wwa"]
+resource_name = "DashDownLeft"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_r4ksf"]
+resource_name = "DashDownRight"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_nlkay"]
+resource_name = "DashUpLeft"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 11)]
+}
+
+[sub_resource type="Animation" id="Animation_qf5x6"]
+resource_name = "DashUpRight"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 10)]
+}
+
 [sub_resource type="Animation" id="Animation_wtjnt"]
 resource_name = "IdleDownLeft"
 length = 0.3
@@ -168,74 +236,6 @@ tracks/0/keys = {
 "values": [Vector2i(0, 6), Vector2i(1, 6), Vector2i(2, 6), Vector2i(3, 6), Vector2i(4, 6), Vector2i(5, 6)]
 }
 
-[sub_resource type="Animation" id="Animation_r4ksf"]
-resource_name = "DashDownRight"
-length = 0.4
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerImage:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(0, 8)]
-}
-
-[sub_resource type="Animation" id="Animation_f7wwa"]
-resource_name = "DashDownLeft"
-length = 0.4
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerImage:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(0, 9)]
-}
-
-[sub_resource type="Animation" id="Animation_qf5x6"]
-resource_name = "DashUpRight"
-length = 0.4
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerImage:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(0, 10)]
-}
-
-[sub_resource type="Animation" id="Animation_nlkay"]
-resource_name = "DashUpLeft"
-length = 0.4
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerImage:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(0, 11)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0dt8"]
 _data = {
 "DashDownLeft": SubResource("Animation_f7wwa"),
@@ -275,7 +275,6 @@ scale = Vector2(1.3746, 0.473335)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
 position = Vector2(0.500873, -69.859)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7fmi2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -289,5 +288,9 @@ wait_time = 0.4
 [node name="CanDashTimer" type="Timer" parent="."]
 wait_time = 1.5
 
+[node name="SpeedPowerUpTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="CanDashTimer" to="." method="_on_can_dash_timer_timeout"]
+[connection signal="timeout" from="SpeedPowerUpTimer" to="." method="_on_speed_power_up_timer_timeout"]

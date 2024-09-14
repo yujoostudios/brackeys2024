@@ -1,8 +1,7 @@
 extends Area2D
 
-
-signal SpeedPowerUpActivate
+signal TimePowerUpActivate
 
 func _on_area_entered(area: Area2D) -> void:
-	emit_signal("SpeedPowerUpActivate")
+	emit_signal("TimePowerUpActivate")
 	queue_free()

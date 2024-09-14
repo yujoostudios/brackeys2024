@@ -1,7 +1,7 @@
 extends Control
 
-var currMinutes
-var currSeconds
+var currMinutes : int
+var currSeconds : int
 
 @export var startMinutes = 0
 @export var startSeconds = 0
@@ -17,6 +17,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	clock_arrow_rotate(delta)
+	var powerups = get_tree().get_nodes_in_group("powerups")
+	for powerup in powerups:
+		powerup.connect("TimePowerUpActivate" , self._time_powerup_activated)
 
 
 func _on_timer_timeout() -> void:
@@ -35,6 +38,12 @@ func _on_timer_timeout() -> void:
 		$HBoxContainer/TimerLabel.text = str(currMinutes) + ":0" + str(currSeconds)
 	else: $HBoxContainer/TimerLabel.text = str(currMinutes) + ":" + str(currSeconds)
 	
+func _time_powerup_activated():
+
+	var totSeconds = (currMinutes * 60) + currSeconds + 30
+	
+	currSeconds = totSeconds % 60
+	currMinutes = totSeconds / 60
 # Starts clock arrow rotation
 func clock_arrow_rotate(delta):
 	var totSeconds = (startMinutes * 60) + startSeconds
