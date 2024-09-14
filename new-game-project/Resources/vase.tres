@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://dkwtnvgf2puhu"]
+
+[ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_hi6yl"]
+
+[resource]
+script = ExtResource("1_hi6yl")
+item_name = "Vase"
+value = 800
+highlight_pic = "res://assets/art/stealables/VaseNightOutline.png"
+regular_pic = "res://assets/art/stealables/VaseNight.png"

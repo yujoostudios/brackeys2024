@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dsxue0232e6n5" path="res://assets/art/furniture/LongTableNight.png" id="1_bcwh6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8ww7"]
-size = Vector2(179, 65)
+size = Vector2(179, 94)
 
 [node name="LongTableNight" type="StaticBody2D"]
 
@@ -12,5 +12,5 @@ texture = ExtResource("1_bcwh6")
 offset = Vector2(0, -40)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -10.5)
+position = Vector2(0.5, -25)
 shape = SubResource("RectangleShape2D_v8ww7")

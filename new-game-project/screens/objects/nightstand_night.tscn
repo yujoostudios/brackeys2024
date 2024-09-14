@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dgoxusxwrsxlh" path="res://assets/art/furniture/NightstandNight.png" id="1_xxb1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq85t"]
-size = Vector2(55, 49)
+size = Vector2(55, 65)
 
 [node name="NightstandNight" type="StaticBody2D"]
 
@@ -12,5 +12,5 @@ texture = ExtResource("1_xxb1p")
 offset = Vector2(0, -35)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -7.5)
+position = Vector2(-0.5, -15.5)
 shape = SubResource("RectangleShape2D_nq85t")

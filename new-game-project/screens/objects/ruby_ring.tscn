@@ -1,28 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqel5f237eelu"]
+[gd_scene load_steps=5 format=3 uid="uid://il6rvfxu27da"]
 
-[ext_resource type="Script" path="res://scripts/pickup.gd" id="1_1fgo2"]
-[ext_resource type="Resource" uid="uid://dpdfn0c4x7dpu" path="res://Resources/Necklace.tres" id="2_ej17t"]
-[ext_resource type="Texture2D" uid="uid://y2ohox6grxm7" path="res://assets/art/stealables/PearlNecklaceNight.png" id="3_k0rlb"]
+[ext_resource type="Script" path="res://scripts/pickup.gd" id="1_inkdi"]
+[ext_resource type="Resource" uid="uid://chdys08g8hi23" path="res://Resources/passport.tres" id="2_0u3x6"]
+[ext_resource type="Texture2D" uid="uid://cog8i3bmrrw1u" path="res://assets/art/stealables/RubyRingNight.png" id="3_ecypf"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pidkg"]
-radius = 31.0161
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxoyi"]
+size = Vector2(53, 44)
 
-[node name="Necklace" type="Area2D" groups=["items"]]
+[node name="RubyRing" type="Area2D" groups=["items"]]
 position = Vector2(-1, -3)
-script = ExtResource("1_1fgo2")
-node_type = ExtResource("2_ej17t")
+script = ExtResource("1_inkdi")
+node_type = ExtResource("2_0u3x6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
 scale = Vector2(0.692308, 0.692308)
-texture = ExtResource("3_k0rlb")
+texture = ExtResource("3_ecypf")
 offset = Vector2(0, -20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(1, -16)
-shape = SubResource("CircleShape2D_pidkg")
+position = Vector2(0.5, -15)
+shape = SubResource("RectangleShape2D_oxoyi")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

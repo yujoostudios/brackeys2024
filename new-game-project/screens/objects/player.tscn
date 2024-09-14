@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://d01luah7ejh3g"]
+[gd_scene load_steps=19 format=3 uid="uid://d01luah7ejh3g"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rppup"]
-[ext_resource type="Texture2D" uid="uid://bva7k7mkiw0ov" path="res://assets/art/sprite sheets/player-same-left-right-collision.png" id="2_hnkna"]
+[ext_resource type="Texture2D" uid="uid://bqcm5ptt8i06v" path="res://assets/art/sprite sheets/player-movement-sprites.png" id="2_d7y4a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5lkv"]
-size = Vector2(35.6467, 25.352)
+size = Vector2(35.6467, 38.028)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fmi2"]
+size = Vector2(76.6601, 210.985)
 
 [sub_resource type="Animation" id="Animation_wtjnt"]
 resource_name = "IdleDownLeft"
@@ -165,8 +168,80 @@ tracks/0/keys = {
 "values": [Vector2i(0, 6), Vector2i(1, 6), Vector2i(2, 6), Vector2i(3, 6), Vector2i(4, 6), Vector2i(5, 6)]
 }
 
+[sub_resource type="Animation" id="Animation_r4ksf"]
+resource_name = "DashDownRight"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_f7wwa"]
+resource_name = "DashDownLeft"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_qf5x6"]
+resource_name = "DashUpRight"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_nlkay"]
+resource_name = "DashUpLeft"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerImage:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 11)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0dt8"]
 _data = {
+"DashDownLeft": SubResource("Animation_f7wwa"),
+"DashDownRight": SubResource("Animation_r4ksf"),
+"DashUpLeft": SubResource("Animation_nlkay"),
+"DashUpRight": SubResource("Animation_qf5x6"),
 "IdleDownLeft": SubResource("Animation_wtjnt"),
 "IdleDownRight": SubResource("Animation_lrcdo"),
 "IdleUpLeft": SubResource("Animation_j4ln4"),
@@ -183,18 +258,36 @@ y_sort_enabled = true
 script = ExtResource("1_rppup")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
-texture = ExtResource("2_hnkna")
+texture = ExtResource("2_d7y4a")
 offset = Vector2(0, -30)
 hframes = 9
-vframes = 8
+vframes = 12
 frame = 45
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(4.5, 9)
+position = Vector2(4.5, 6)
 scale = Vector2(1.3746, 0.473335)
 shape = SubResource("RectangleShape2D_o5lkv")
+
+[node name="PlayerArea" type="Area2D" parent="."]
+position = Vector2(4, 7)
+scale = Vector2(1.3746, 0.473335)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+position = Vector2(0.500873, -69.859)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7fmi2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_t0dt8")
 }
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="CanDashTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="CanDashTimer" to="." method="_on_can_dash_timer_timeout"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://chdys08g8hi23"]
+
+[ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_84rpp"]
+
+[resource]
+script = ExtResource("1_84rpp")
+item_name = "Passport"
+value = 200
+highlight_pic = "res://assets/art/stealables/PassportOutline.png"
+regular_pic = "res://assets/art/stealables/Passport.png"

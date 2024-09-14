@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=3 format=3 uid="uid://cmxqdp2xy5dgc"]
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://cmxqdp2xy5dgc"]
 
-[ext_resource type="Texture2D" uid="uid://bvphn73jonta5" path="res://assets/pickups/💸.png" id="1_5up60"]
 [ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_mqurc"]
 
 [resource]
 script = ExtResource("1_mqurc")
 item_name = "Money"
 value = 3000
-picture = ExtResource("1_5up60")
+highlight_pic = ""
+regular_pic = ""

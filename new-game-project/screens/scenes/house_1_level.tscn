@@ -1,17 +1,16 @@
-[gd_scene load_steps=35 format=4 uid="uid://cog72oekdkmda"]
+[gd_scene load_steps=39 format=4 uid="uid://cog72oekdkmda"]
 
 [ext_resource type="Script" path="res://screens/scenes/house_1_level.gd" id="1_ayq44"]
 [ext_resource type="PackedScene" uid="uid://dqel5f237eelu" path="res://screens/objects/necklace.tscn" id="1_qqjqs"]
 [ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/tilemaps/flooring-night-tilemap.png" id="1_tfgr4"]
 [ext_resource type="Texture2D" uid="uid://cn3vdcewu22cn" path="res://assets/art/tilemaps/wallpaper_night_tilemap.png" id="2_5lf1o"]
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="2_8dbuv"]
-[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/tilemaps/wall-night-tilemap.png" id="2_lxy8w"]
+[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/wall-night-tilemap.png" id="2_lxy8w"]
 [ext_resource type="Texture2D" uid="uid://bootpjaofvgyb" path="res://assets/art/tilemaps/stairs.png" id="3_8rx8v"]
 [ext_resource type="Texture2D" uid="uid://bnnfjglpo73cs" path="res://assets/art/furniture/BlueRugNight.png" id="3_oeexq"]
 [ext_resource type="Texture2D" uid="uid://lacx76wku0j" path="res://assets/art/furniture/GreenRugNight.png" id="4_gtsv5"]
 [ext_resource type="PackedScene" uid="uid://daa5xuivk3co0" path="res://screens/objects/couch_night.tscn" id="5_cx8l4"]
 [ext_resource type="PackedScene" uid="uid://can5jyw7gib3n" path="res://screens/objects/chair_night.tscn" id="5_pm3xp"]
-[ext_resource type="PackedScene" uid="uid://c2mccesqsug76" path="res://screens/objects/scroll.tscn" id="6_3s266"]
 [ext_resource type="PackedScene" uid="uid://be3nq36scgik6" path="res://screens/objects/king_bed_night.tscn" id="8_vt117"]
 [ext_resource type="PackedScene" uid="uid://7owgkj3rqvk5" path="res://screens/objects/long_table_night.tscn" id="9_3atmq"]
 [ext_resource type="PackedScene" uid="uid://cdlohmpyhlt1x" path="res://screens/objects/nightstand_night.tscn" id="10_brmkb"]
@@ -22,8 +21,13 @@
 [ext_resource type="PackedScene" uid="uid://bvv53m0y4dao0" path="res://screens/objects/baby_and_crib.tscn" id="16_sq1ho"]
 [ext_resource type="AudioStream" uid="uid://da2ovdnv0cw7t" path="res://assets/music/sneaking-music.mp3" id="18_pxhl2"]
 [ext_resource type="PackedScene" uid="uid://djet31iygecq1" path="res://ui/ui.tscn" id="19_vigtb"]
-[ext_resource type="PackedScene" uid="uid://dvjqj0mfgngys" path="res://screens/objects/Money.tscn" id="21_k5d5m"]
+[ext_resource type="PackedScene" uid="uid://drnykdmtclwda" path="res://screens/objects/tv.tscn" id="22_6fu07"]
+[ext_resource type="PackedScene" uid="uid://cn0ouodtw0siu" path="res://screens/objects/dog_bone.tscn" id="22_era6i"]
 [ext_resource type="PackedScene" uid="uid://c2mcxy43kiluh" path="res://screens/objects/computer.tscn" id="23_3y62m"]
+[ext_resource type="PackedScene" uid="uid://dtp5a0brmpwy2" path="res://screens/objects/vase.tscn" id="23_mu71f"]
+[ext_resource type="PackedScene" uid="uid://c1hqu2bqopwo5" path="res://screens/objects/laptop.tscn" id="25_b6lpd"]
+[ext_resource type="PackedScene" uid="uid://iskf08byxw2k" path="res://screens/objects/passport.tscn" id="27_w4r70"]
+[ext_resource type="PackedScene" uid="uid://il6rvfxu27da" path="res://screens/objects/ruby_ring.tscn" id="28_ivcle"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vakw3"]
 texture = ExtResource("1_tfgr4")
@@ -883,6 +887,9 @@ position = Vector2(1095, 1070)
 [node name="LongTableNight2" parent="Furniture" instance=ExtResource("9_3atmq")]
 position = Vector2(1095, 1070)
 
+[node name="LongTableNight3" parent="Furniture" instance=ExtResource("9_3atmq")]
+position = Vector2(-169, 462)
+
 [node name="NightstandNight" parent="Furniture" instance=ExtResource("10_brmkb")]
 position = Vector2(287, -10)
 
@@ -900,11 +907,18 @@ position = Vector2(1183, 1046)
 scale = Vector2(-1, 1)
 
 [node name="SideCouchNight" parent="Furniture" instance=ExtResource("12_xfvl2")]
-position = Vector2(359, 1094)
+position = Vector2(359, 1102)
+scale = Vector2(-1, 1)
+
+[node name="SideCouchNight5" parent="Furniture" instance=ExtResource("12_xfvl2")]
+position = Vector2(1215, 326)
 scale = Vector2(-1, 1)
 
 [node name="SideCouchNight2" parent="Furniture" instance=ExtResource("12_xfvl2")]
-position = Vector2(79, 1102)
+position = Vector2(63, 1102)
+
+[node name="SideCouchNight4" parent="Furniture" instance=ExtResource("12_xfvl2")]
+position = Vector2(983, 318)
 
 [node name="SingleBedNight" parent="Furniture" instance=ExtResource("13_u85vf")]
 position = Vector2(1223, 6)
@@ -913,26 +927,21 @@ position = Vector2(1223, 6)
 position = Vector2(359, 950)
 
 [node name="SmallTableNight2" parent="Furniture" instance=ExtResource("14_ey786")]
-position = Vector2(79, 950)
+position = Vector2(63, 950)
 
 [node name="BabyAndCrib" parent="Furniture" instance=ExtResource("16_sq1ho")]
 position = Vector2(1439, -26)
 
-[node name="Necklace" parent="." instance=ExtResource("1_qqjqs")]
-z_index = 2
+[node name="SideCouchNight3" parent="Furniture" instance=ExtResource("12_xfvl2")]
+position = Vector2(1831, -2)
+scale = Vector2(-1, 1)
+
+[node name="StealableItemsBottom" type="Node2D" parent="."]
+z_index = 1
 y_sort_enabled = true
-position = Vector2(968, 827)
 
-[node name="Scroll" parent="." instance=ExtResource("6_3s266")]
-z_index = 2
-y_sort_enabled = true
-position = Vector2(853, 789)
-
-[node name="Computer" parent="." instance=ExtResource("23_3y62m")]
-position = Vector2(1142, 826)
-
-[node name="Money" parent="." instance=ExtResource("21_k5d5m")]
-position = Vector2(1190, 1008)
+[node name="DogBone" parent="StealableItemsBottom" instance=ExtResource("22_era6i")]
+position = Vector2(464, 1088)
 
 [node name="Player" parent="." instance=ExtResource("2_8dbuv")]
 z_index = 2
@@ -980,4 +989,38 @@ position = Vector2(-3024, 48)
 position = Vector2(2744, 1492)
 shape = SubResource("RectangleShape2D_bghl0")
 
-[connection signal="money_change" from="Necklace" to="CanvasLayer/UI" method="_on_necklace_money_change"]
+[node name="StealableItemsYSort" type="Node2D" parent="."]
+z_index = 2
+y_sort_enabled = true
+
+[node name="TV" parent="StealableItemsYSort" instance=ExtResource("22_6fu07")]
+position = Vector2(616, 56)
+
+[node name="Vase" parent="StealableItemsYSort" instance=ExtResource("23_mu71f")]
+position = Vector2(448, 592)
+
+[node name="Vase3" parent="StealableItemsYSort" instance=ExtResource("23_mu71f")]
+position = Vector2(-24, -168)
+
+[node name="Vase2" parent="StealableItemsYSort" instance=ExtResource("23_mu71f")]
+position = Vector2(256, 592)
+
+[node name="Laptop" parent="StealableItemsYSort" instance=ExtResource("25_b6lpd")]
+position = Vector2(-288, 832)
+
+[node name="SteablleItemsTop" type="Node2D" parent="."]
+z_index = 3
+
+[node name="Necklace" parent="SteablleItemsTop" instance=ExtResource("1_qqjqs")]
+position = Vector2(664, 896)
+
+[node name="Passport" parent="SteablleItemsTop" instance=ExtResource("27_w4r70")]
+position = Vector2(-192, -192)
+
+[node name="RubyRing" parent="SteablleItemsTop" instance=ExtResource("28_ivcle")]
+position = Vector2(1344, -152)
+
+[node name="Computer" parent="SteablleItemsTop" instance=ExtResource("23_3y62m")]
+position = Vector2(-608, 256)
+
+[connection signal="money_change" from="SteablleItemsTop/Necklace" to="CanvasLayer/UI" method="_on_necklace_money_change"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://cow578tmqu7td"]
+
+[ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_fb2ce"]
+
+[resource]
+script = ExtResource("1_fb2ce")
+item_name = "Dog Bone"
+value = 200
+highlight_pic = "res://assets/art/stealables/DogBoneNightOutline.png"
+regular_pic = "res://assets/art/stealables/DogBoneNight.png"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://b5pelcyd6j0xs"]
+
+[ext_resource type="Script" path="res://scripts/ResourceType.gd" id="1_i5fv5"]
+
+[resource]
+script = ExtResource("1_i5fv5")
+item_name = "tv"
+value = 3000
+highlight_pic = "res://assets/art/stealables/TvNightOutline.png"
+regular_pic = "res://assets/art/stealables/TvNight.png"

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cxdp27dfghfxw" path="res://assets/art/furniture/couch-night.png" id="1_fmh0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tj5sq"]
-size = Vector2(143.5, 39)
+size = Vector2(143.5, 53.5)
 
 [node name="CouchNight" type="StaticBody2D"]
 
@@ -12,5 +12,5 @@ texture = ExtResource("1_fmh0m")
 offset = Vector2(0, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, 10)
+position = Vector2(0.25, 2.75)
 shape = SubResource("RectangleShape2D_tj5sq")
