@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2irndp01k7o1"]
+
+[ext_resource type="Texture2D" uid="uid://cbpnh3ilc6ku5" path="res://assets/art/house-2.png" id="1_iecud"]
+[ext_resource type="Script" path="res://screens/objects/house_2_door.gd" id="2_sl4kg"]
+[ext_resource type="Texture2D" uid="uid://cikh1rxfico4j" path="res://assets/art/house-2-door.png" id="3_4chgr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v73h0"]
+size = Vector2(177, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8105"]
+size = Vector2(199, 60)
+
+[node name="house_2" type="Node2D"]
+
+[node name="house" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="house"]
+texture = ExtResource("1_iecud")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house"]
+visible = false
+polygon = PackedVector2Array(-95, 125, -118, 106, -117, 9, 117, 10, 117, 108, 91, 108, -9, 108, -14, 114, -20, 125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house"]
+position = Vector2(-0.5, 98.5)
+shape = SubResource("RectangleShape2D_v73h0")
+
+[node name="house_2_door" type="Area2D" parent="."]
+script = ExtResource("2_sl4kg")
+
+[node name="Sprite2D" type="Sprite2D" parent="house_2_door"]
+texture = ExtResource("3_4chgr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house_2_door"]
+position = Vector2(-0.5, 130)
+shape = SubResource("RectangleShape2D_q8105")
+
+[node name="Timer" type="Timer" parent="house_2_door"]
+wait_time = 0.105
+
+[connection signal="body_entered" from="house_2_door" to="house_2_door" method="_on_body_entered"]
+[connection signal="body_exited" from="house_2_door" to="house_2_door" method="_on_body_exited"]
+[connection signal="timeout" from="house_2_door/Timer" to="house_2_door" method="_on_timer_timeout"]
