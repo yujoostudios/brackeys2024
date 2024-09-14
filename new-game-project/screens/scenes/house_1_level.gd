@@ -25,3 +25,4 @@ func calc_noise_meter_value():
 	else:
 		global.noise_meter_value = int(104 - ((distance / longest_distance) * 100))
 		print(global.noise_meter_value)
+		

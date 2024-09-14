@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqx47sdxkuswk" path="res://assets/art/tilemaps/flooring-night-tilemap.png" id="1_tfgr4"]
 [ext_resource type="Texture2D" uid="uid://cn3vdcewu22cn" path="res://assets/art/tilemaps/wallpaper_night_tilemap.png" id="2_5lf1o"]
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="2_8dbuv"]
-[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/wall-night-tilemap.png" id="2_lxy8w"]
+[ext_resource type="Texture2D" uid="uid://ceschc3orkg2n" path="res://assets/art/tilemaps/wall-night-tilemap.png" id="2_lxy8w"]
 [ext_resource type="Texture2D" uid="uid://bootpjaofvgyb" path="res://assets/art/tilemaps/stairs.png" id="3_8rx8v"]
 [ext_resource type="Texture2D" uid="uid://bnnfjglpo73cs" path="res://assets/art/furniture/BlueRugNight.png" id="3_oeexq"]
 [ext_resource type="Texture2D" uid="uid://lacx76wku0j" path="res://assets/art/furniture/GreenRugNight.png" id="4_gtsv5"]

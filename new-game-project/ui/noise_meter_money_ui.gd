@@ -10,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$ProgressBar.value = global.noise_meter_value
 	calc_noise_meter_color()
+	_update_money()
 	pass
 
 func calc_noise_meter_color():
@@ -19,3 +20,6 @@ func calc_noise_meter_color():
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.75686274509, 0.20392156862, 0.10588235294)
 	else:
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.06274509803, 0.58431372549, 0.52156862745)
+
+func _update_money():
+	$HBoxContainer/Label.text = str(global.total_money)

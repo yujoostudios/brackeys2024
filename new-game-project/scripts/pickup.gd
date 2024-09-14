@@ -14,6 +14,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	if Input.is_action_pressed("interact"):
+		global.total_money = global.total_money + node_type.value
 		queue_free()
 
 
