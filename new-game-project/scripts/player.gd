@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 100
+@export var speed := 200
 @onready var animations = $AnimationPlayer
 var ydirection = "Down"
 var xdirection = "Right"

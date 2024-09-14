@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cy8bfjy2culrp"]
 
 [ext_resource type="Texture2D" uid="uid://dlsf1donxvboo" path="res://ui/time_visual_ui.png" id="1_axvks"]
-[ext_resource type="Script" path="res://screens/objects/clock_ui.gd" id="1_vw5iy"]
+[ext_resource type="Script" path="res://scripts/clock_ui.gd" id="1_vw5iy"]
 [ext_resource type="Texture2D" uid="uid://0ym82x8adcis" path="res://ui/clock_arrow_ui.png" id="2_q57tk"]
 [ext_resource type="Texture2D" uid="uid://csnehgism43yn" path="res://ui/clock_ui.png" id="3_cprrs"]
 

@@ -3,8 +3,8 @@ extends Control
 var currMinutes
 var currSeconds
 
-var startMinutes = 1
-var startSeconds = 15
+var startMinutes = 0
+var startSeconds = 45
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://xnkth15cf6kq"]
+
+[ext_resource type="Texture2D" uid="uid://bo3arwjjjqxha" path="res://ui/noise_meter_ui_bg.png" id="1_2qo63"]
+[ext_resource type="Script" path="res://ui/noise_meter_money_ui.gd" id="1_yf6bl"]
+[ext_resource type="Texture2D" uid="uid://cv2r7g3na3b7j" path="res://ui/noise_money_ui.png" id="2_8btgx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lxy76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o0he"]
+bg_color = Color(0.0627451, 0.584314, 0.521569, 1)
+
+[node name="NoiseMeterMoneyUI" type="Control"]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yf6bl")
+
+[node name="NoiseMeterBG" type="Sprite2D" parent="."]
+texture = ExtResource("1_2qo63")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -92.0
+offset_top = -40.0
+offset_right = 128.0
+offset_bottom = -20.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_lxy76")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1o0he")
+show_percentage = false
+
+[node name="NoiseMeterMoney" type="Sprite2D" parent="."]
+texture = ExtResource("2_8btgx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 116.0
+offset_bottom = 39.0
+alignment = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "0"
