@@ -1024,10 +1024,10 @@ position = Vector2(1344, -152)
 [node name="Computer" parent="SteablleItemsTop" instance=ExtResource("23_3y62m")]
 position = Vector2(-608, 256)
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="CanvasLayer2" type="CanvasLayer" parent="." groups=["game_over"]]
+visible = false
 
 [node name="GameOver" parent="CanvasLayer2" instance=ExtResource("29_kgccn")]
-visible = false
 z_index = 4
 
 [connection signal="money_change" from="SteablleItemsTop/Necklace" to="CanvasLayer/UI" method="_on_necklace_money_change"]
