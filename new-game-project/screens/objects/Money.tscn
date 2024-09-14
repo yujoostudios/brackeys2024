@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvjqj0mfgngys"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_y0mr0"]
-[ext_resource type="Resource" uid="uid://cmxqdp2xy5dgc" path="res://Resources/money_icon.tres" id="2_vt7el"]
+[ext_resource type="Resource" uid="uid://cmxqdp2xy5dgc" path="res://Resources/Items/money_icon.tres" id="2_vt7el"]
 [ext_resource type="Texture2D" uid="uid://bvphn73jonta5" path="res://assets/pickups/💸.png" id="3_o6hnc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pidkg"]

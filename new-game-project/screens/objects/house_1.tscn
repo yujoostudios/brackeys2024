@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbj54lidvkpip"]
+[gd_scene load_steps=6 format=3 uid="uid://bbj54lidvkpip"]
 
 [ext_resource type="Texture2D" uid="uid://bsgwnfvs0et5m" path="res://assets/art/house-1.png" id="1_d0auk"]
 [ext_resource type="Texture2D" uid="uid://cyaqgyxjmvhx3" path="res://assets/art/house-1-door.png" id="2_8yoy1"]
-[ext_resource type="Script" path="res://scripts/house_1_door.gd" id="2_h0q5a"]
+[ext_resource type="Script" path="res://scripts/house_door.gd" id="2_h0q5a"]
+[ext_resource type="Resource" uid="uid://bdjyt0cgncc8d" path="res://Resources/Doors/Door1.tres" id="3_ic2ps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8105"]
 size = Vector2(144.5, 48)
@@ -19,6 +20,7 @@ polygon = PackedVector2Array(-95, 125, -118, 106, -117, 9, 117, 10, 117, 108, 91
 
 [node name="house_1_door" type="Area2D" parent="." groups=["house_doors"]]
 script = ExtResource("2_h0q5a")
+door_type = ExtResource("3_ic2ps")
 
 [node name="Sprite2D" type="Sprite2D" parent="house_1_door"]
 texture = ExtResource("2_8yoy1")

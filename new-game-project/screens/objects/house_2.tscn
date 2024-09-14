@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2irndp01k7o1"]
+[gd_scene load_steps=7 format=3 uid="uid://bdoe2hnpq3o8c"]
 
 [ext_resource type="Texture2D" uid="uid://cbpnh3ilc6ku5" path="res://assets/art/house-2.png" id="1_iecud"]
-[ext_resource type="Script" path="res://screens/objects/house_2_door.gd" id="2_sl4kg"]
+[ext_resource type="Script" path="res://scripts/house_door.gd" id="2_qa5yc"]
+[ext_resource type="Resource" uid="uid://bdjyt0cgncc8d" path="res://Resources/Doors/Door1.tres" id="3_1s2gq"]
 [ext_resource type="Texture2D" uid="uid://cikh1rxfico4j" path="res://assets/art/house-2-door.png" id="3_4chgr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v73h0"]
@@ -26,7 +27,8 @@ position = Vector2(-0.5, 98.5)
 shape = SubResource("RectangleShape2D_v73h0")
 
 [node name="house_2_door" type="Area2D" parent="."]
-script = ExtResource("2_sl4kg")
+script = ExtResource("2_qa5yc")
+door_type = ExtResource("3_1s2gq")
 
 [node name="Sprite2D" type="Sprite2D" parent="house_2_door"]
 texture = ExtResource("3_4chgr")

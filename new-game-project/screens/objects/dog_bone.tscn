@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cn0ouodtw0siu"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_dm1ls"]
-[ext_resource type="Resource" uid="uid://cow578tmqu7td" path="res://Resources/dog_bone.tres" id="2_yd63m"]
+[ext_resource type="Resource" uid="uid://cow578tmqu7td" path="res://Resources/Items/dog_bone.tres" id="2_yd63m"]
 [ext_resource type="Texture2D" uid="uid://dpvk2um5i6370" path="res://assets/art/stealables/DogBoneNight.png" id="3_jgslq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrfgu"]
