@@ -32,6 +32,8 @@ project/assembly_name="New Game Project"
 
 items=""
 house=""
+clock=""
+game_over=""
 
 [gui]
 

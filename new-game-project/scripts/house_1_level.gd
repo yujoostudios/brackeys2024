@@ -15,6 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	calc_noise_meter_value()
 	emit_signal("send_noise_value", noise_meter_value)
+	
+	var clock = get_tree().get_first_node_in_group("clock")
+	clock.connect("time_over", self._game_over_overlay)
 
 # Calculate the current distance between player and baby
 func calc_noise_meter_value():
@@ -28,4 +31,11 @@ func calc_noise_meter_value():
 	else:
 		noise_meter_value = int(104 - ((distance / longest_distance) * 100))	
 	emit_signal("send_noise_value", noise_meter_value)
-		
+	
+
+func _game_over_overlay():
+	print('game over')
+	var game_over = get_tree().get_first_node_in_group("game_over")
+	print(game_over.name)
+	game_over.visible = true
+	

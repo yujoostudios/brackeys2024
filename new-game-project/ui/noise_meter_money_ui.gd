@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 
 func calc_noise_meter_color(value : int):
 	$ProgressBar.value = value
-	print($ProgressBar.value)
+	#print($ProgressBar.value)
 	if value > 75 && value < 90:
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.89, 0.4, 0.2)
 	elif value >= 90:

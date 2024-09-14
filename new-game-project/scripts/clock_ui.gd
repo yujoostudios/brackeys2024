@@ -3,9 +3,10 @@ extends Control
 var currMinutes
 var currSeconds
 
-var startMinutes = 0
-var startSeconds = 45
+@export var startMinutes = 0
+@export var startSeconds = 45
 
+signal time_over
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	reset_timer()
@@ -20,6 +21,8 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if currMinutes == 0 && currSeconds == 0:
+		print('test')
+		emit_signal("time_over")
 		currSeconds = 1
 	elif currMinutes > 0:
 		if currSeconds == 0:
