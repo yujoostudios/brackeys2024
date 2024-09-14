@@ -15,35 +15,65 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 26.0
+offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yf6bl")
 
 [node name="NoiseMeterBG" type="Sprite2D" parent="."]
+position = Vector2(-7, -43)
 texture = ExtResource("1_2qo63")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = -92.0
-offset_top = -40.0
-offset_right = 128.0
-offset_bottom = -20.0
-theme_override_styles/background = SubResource("StyleBoxEmpty_lxy76")
-theme_override_styles/fill = SubResource("StyleBoxFlat_1o0he")
-show_percentage = false
-
 [node name="NoiseMeterMoney" type="Sprite2D" parent="."]
+position = Vector2(-7, -43)
 texture = ExtResource("2_8btgx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 14.0
-offset_right = 116.0
-offset_bottom = 39.0
+offset_left = 6.0
+offset_top = -29.0
+offset_right = 109.0
+offset_bottom = -4.0
 alignment = 2
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "0"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -99.0
+offset_top = -83.0
+offset_right = 121.0
+offset_bottom = -63.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_lxy76")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1o0he")
+show_percentage = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+offset_left = -132.0
+offset_top = 23.0
+offset_right = 132.0
+offset_bottom = 72.0
+texture = ExtResource("1_2qo63")
+region_rect = Rect2(48, 9, 220, 18)
+patch_margin_left = 7
+patch_margin_top = 13
+patch_margin_right = 5
+patch_margin_bottom = 14
+
+[node name="ObjectiveLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -131.0
+offset_top = 26.0
+offset_right = 131.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.756863, 0.203922, 0.105882, 1)
+theme_override_font_sizes/font_size = 16
+text = "Objective: Steal $5000 worth of items"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

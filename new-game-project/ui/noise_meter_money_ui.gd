@@ -1,10 +1,11 @@
 extends Control
 
 var total_value = 0
+const MONEY_OBJECTIVE = 10000
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
+func _ready() -> void:
+	set_money_objective()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -20,6 +21,7 @@ func _process(delta: float) -> void:
 
 func calc_noise_meter_color(value : int):
 	$ProgressBar.value = value
+	print($ProgressBar.value)
 	if value > 75 && value < 90:
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.89, 0.4, 0.2)
 	elif value >= 90:
@@ -34,3 +36,6 @@ func _update_money(value : int):
 
 func _on_ui_extend(value : int):
 	$HBoxContainer/Label.text = str()
+	
+func set_money_objective():
+	$ObjectiveLabel.text = "Objective: Steal $" + str(MONEY_OBJECTIVE) + " worth of items."

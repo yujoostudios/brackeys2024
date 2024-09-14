@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bvv53m0y4dao0"]
 
 [ext_resource type="Texture2D" uid="uid://oxpyu0l4tipe" path="res://assets/art/sprite sheets/baby_and_crib_inner_padding.png" id="1_5yoon"]
-[ext_resource type="Script" path="res://screens/objects/baby_and_crib.gd" id="1_gldnq"]
+[ext_resource type="Script" path="res://scripts/baby_and_crib.gd" id="1_gldnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhof8"]
 size = Vector2(76.5, 98)
