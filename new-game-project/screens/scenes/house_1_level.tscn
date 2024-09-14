@@ -944,7 +944,7 @@ y_sort_enabled = true
 [node name="DogBone" parent="StealableItemsBottom" instance=ExtResource("22_era6i")]
 position = Vector2(464, 1088)
 
-[node name="Player" parent="." instance=ExtResource("2_8dbuv")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_8dbuv")]
 z_index = 2
 position = Vector2(888, 1192)
 

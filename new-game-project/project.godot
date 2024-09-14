@@ -34,6 +34,8 @@ items=""
 house=""
 clock=""
 game_over=""
+player=""
+house_doors=""
 
 [gui]
 

@@ -6,6 +6,7 @@ var longest_distance = 2151
 var noise_meter_value = 0
 
 signal send_noise_value
+signal stop_player_movement
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -34,8 +35,9 @@ func calc_noise_meter_value():
 	
 
 func _game_over_overlay():
-	print('game over')
+	#print('game over')
 	var game_over = get_tree().get_first_node_in_group("game_over")
-	print(game_over.name)
+	emit_signal("stop_player_movement", true)
+	#print(game_over.name)
 	game_over.visible = true
 	
