@@ -2,7 +2,9 @@ extends Node2D
 
 @onready var baby = $Furniture/BabyAndCrib
 @onready var player = $Player
-var longest_distance = 2151
+
+@export var house_type : HouseNodeType
+
 var noise_meter_value = 0
 
 signal send_noise_value
@@ -25,12 +27,11 @@ func calc_noise_meter_value():
 	var player_position = player.global_transform.origin
 	var baby_position = baby.global_transform.origin 
 	var distance = player_position.distance_to(baby_position)
-	
-	if distance > longest_distance:
+	if distance > house_type.longest_distance:
 		#global.noise_meter_value = 0
 		noise_meter_value = 0
 	else:
-		noise_meter_value = int(104 - ((distance / longest_distance) * 100))	
+		noise_meter_value = int(104 - ((distance / house_type.longest_distance) * 100))	
 	emit_signal("send_noise_value", noise_meter_value)
 	
 

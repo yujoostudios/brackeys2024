@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://il6rvfxu27da"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_inkdi"]
-[ext_resource type="Resource" uid="uid://chdys08g8hi23" path="res://Resources/passport.tres" id="2_0u3x6"]
+[ext_resource type="Resource" uid="uid://chdys08g8hi23" path="res://Resources/Items/passport.tres" id="2_0u3x6"]
 [ext_resource type="Texture2D" uid="uid://cog8i3bmrrw1u" path="res://assets/art/stealables/RubyRingNight.png" id="3_ecypf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxoyi"]

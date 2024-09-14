@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DoorNodeType" load_steps=2 format=3 uid="uid://bc17rafus11sm"]
+
+[ext_resource type="Script" path="res://scripts/DoorType.gd" id="1_odmye"]
+
+[resource]
+script = ExtResource("1_odmye")
+highlight = ""
+base_door = ""
+level_scene = ""

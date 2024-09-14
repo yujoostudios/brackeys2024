@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqel5f237eelu"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_1fgo2"]
-[ext_resource type="Resource" uid="uid://dpdfn0c4x7dpu" path="res://Resources/Necklace.tres" id="2_ej17t"]
+[ext_resource type="Resource" uid="uid://dpdfn0c4x7dpu" path="res://Resources/Items/Necklace.tres" id="2_ej17t"]
 [ext_resource type="Texture2D" uid="uid://y2ohox6grxm7" path="res://assets/art/stealables/PearlNecklaceNight.png" id="3_k0rlb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pidkg"]

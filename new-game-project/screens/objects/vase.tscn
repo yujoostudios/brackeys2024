@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtp5a0brmpwy2"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_fghih"]
-[ext_resource type="Resource" uid="uid://dkwtnvgf2puhu" path="res://Resources/vase.tres" id="2_dws1p"]
+[ext_resource type="Resource" uid="uid://dkwtnvgf2puhu" path="res://Resources/Items/vase.tres" id="2_dws1p"]
 [ext_resource type="Texture2D" uid="uid://chiv144x8it4d" path="res://assets/art/stealables/VaseNight.png" id="3_vumq7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrfgu"]

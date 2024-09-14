@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2mcxy43kiluh"]
 
 [ext_resource type="Script" path="res://scripts/pickup.gd" id="1_pt2gv"]
-[ext_resource type="Resource" uid="uid://cr2p60m3f6y5d" path="res://Resources/computer.tres" id="2_5j482"]
+[ext_resource type="Resource" uid="uid://cr2p60m3f6y5d" path="res://Resources/Items/computer.tres" id="2_5j482"]
 [ext_resource type="Texture2D" uid="uid://dhv3vtxj2krml" path="res://assets/art/stealables/ComputerNight.png" id="3_xsfxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42ox0"]
