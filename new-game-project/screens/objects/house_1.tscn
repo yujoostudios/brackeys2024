@@ -17,7 +17,7 @@ texture = ExtResource("1_d0auk")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house"]
 polygon = PackedVector2Array(-95, 125, -118, 106, -117, 9, 117, 10, 117, 108, 91, 108, -9, 108, -14, 114, -20, 125)
 
-[node name="house_1_door" type="Area2D" parent="."]
+[node name="house_1_door" type="Area2D" parent="." groups=["house_doors"]]
 script = ExtResource("2_h0q5a")
 
 [node name="Sprite2D" type="Sprite2D" parent="house_1_door"]
