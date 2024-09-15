@@ -24,7 +24,6 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if currMinutes == 0 && currSeconds == 0:
-		print('test')
 		emit_signal("time_over")
 		currSeconds = 1
 	elif currMinutes > 0:
