@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cw10udmiqn8co"]
+[gd_scene load_steps=15 format=4 uid="uid://cw10udmiqn8co"]
 
 [ext_resource type="Texture2D" uid="uid://ddh1jgfgedkow" path="res://assets/art/outside-map-bg.png" id="1_8gcjk"]
 [ext_resource type="Script" path="res://scripts/outside_map.gd" id="1_d6jcg"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="3_uefh5"]
 [ext_resource type="PackedScene" uid="uid://bdoe2hnpq3o8c" path="res://screens/objects/house_2.tscn" id="5_j7er6"]
 [ext_resource type="PackedScene" uid="uid://c25kv35tdq1ra" path="res://screens/objects/shrub_night.tscn" id="7_ik5ar"]
-[ext_resource type="PackedScene" uid="uid://bo8rl0lxafbjp" path="res://screens/objects/sneaking_audio.tscn" id="8_ilhqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iig0"]
 size = Vector2(1280, 29)
@@ -136,6 +135,3 @@ position = Vector2(240, 368)
 
 [node name="Shrub2" parent="." instance=ExtResource("7_ik5ar")]
 position = Vector2(1112, 512)
-
-[node name="SneakingAudio" parent="." instance=ExtResource("8_ilhqy")]
-volume_db = -4.0
