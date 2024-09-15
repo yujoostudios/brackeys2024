@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="3_uefh5"]
 [ext_resource type="PackedScene" uid="uid://bdoe2hnpq3o8c" path="res://screens/objects/house_2.tscn" id="5_j7er6"]
 [ext_resource type="PackedScene" uid="uid://c25kv35tdq1ra" path="res://screens/objects/shrub_night.tscn" id="7_ik5ar"]
-[ext_resource type="PackedScene" uid="uid://bo8rl0lxafbjp" path="res://screens/objects/sneaking_audio.tscn" id="8_ilhqy"]
+[ext_resource type="PackedScene" path="res://screens/objects/sneaking_audio.tscn" id="8_ilhqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iig0"]
 size = Vector2(1280, 29)

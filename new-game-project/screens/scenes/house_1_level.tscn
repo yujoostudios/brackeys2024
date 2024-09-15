@@ -23,10 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://cu5417sfct3nn" path="res://screens/objects/arm_chair_side.tscn" id="19_fx2b3"]
 [ext_resource type="PackedScene" uid="uid://djet31iygecq1" path="res://ui/ui.tscn" id="19_vigtb"]
 [ext_resource type="PackedScene" uid="uid://du6rmwnkkpomk" path="res://screens/objects/house_plant.tscn" id="20_47i0x"]
-[ext_resource type="PackedScene" uid="uid://dtoojcxa7476f" path="res://screens/objects/lamp.tscn" id="21_n3ac0"]
+[ext_resource type="PackedScene" path="res://screens/objects/lamp.tscn" id="21_n3ac0"]
 [ext_resource type="PackedScene" uid="uid://drnykdmtclwda" path="res://screens/objects/tv.tscn" id="22_6fu07"]
 [ext_resource type="PackedScene" uid="uid://cn0ouodtw0siu" path="res://screens/objects/dog_bone.tscn" id="22_era6i"]
-[ext_resource type="PackedScene" uid="uid://cyryypkgy5vek" path="res://screens/objects/fridge.tscn" id="22_vhi4o"]
+[ext_resource type="PackedScene" path="res://screens/objects/fridge.tscn" id="22_vhi4o"]
 [ext_resource type="PackedScene" uid="uid://c2mcxy43kiluh" path="res://screens/objects/computer.tscn" id="23_3y62m"]
 [ext_resource type="PackedScene" uid="uid://dtp5a0brmpwy2" path="res://screens/objects/vase.tscn" id="23_mu71f"]
 [ext_resource type="PackedScene" uid="uid://c1hqu2bqopwo5" path="res://screens/objects/laptop.tscn" id="25_b6lpd"]
@@ -1041,9 +1041,6 @@ position = Vector2(464, 1088)
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_8dbuv")]
 z_index = 2
 position = Vector2(888, 1192)
-dashnoise = 5
-walknoise = 2
-standnoise = -1
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 limit_left = -832
