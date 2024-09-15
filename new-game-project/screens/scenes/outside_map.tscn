@@ -138,3 +138,4 @@ position = Vector2(240, 368)
 position = Vector2(1112, 512)
 
 [node name="SneakingAudio" parent="." instance=ExtResource("8_ilhqy")]
+volume_db = -4.0

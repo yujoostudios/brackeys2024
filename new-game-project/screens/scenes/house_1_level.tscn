@@ -1041,9 +1041,6 @@ position = Vector2(464, 1088)
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_8dbuv")]
 z_index = 2
 position = Vector2(888, 1192)
-dashnoise = 5
-walknoise = 2
-standnoise = -1
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 limit_left = -832
