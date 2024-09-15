@@ -21,7 +21,7 @@ offset_bottom = 288.0
 startMinutes = 3
 startSeconds = 3
 
-[node name="NoiseMeterMoneyUI" parent="." groups=["items"] instance=ExtResource("2_m8lan")]
+[node name="NoiseMeterMoneyUI" parent="." groups=["noise"] instance=ExtResource("2_m8lan")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0

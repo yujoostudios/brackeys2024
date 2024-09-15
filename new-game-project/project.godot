@@ -38,6 +38,7 @@ game_over=""
 player=""
 house_doors=""
 powerups=""
+noise=""
 
 [gui]
 

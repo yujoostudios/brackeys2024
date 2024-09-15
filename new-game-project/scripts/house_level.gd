@@ -21,6 +21,9 @@ func _process(delta: float) -> void:
 	
 	var clock = get_tree().get_first_node_in_group("clock")
 	clock.connect("time_over", self._game_over_overlay)
+	
+	var noise = get_tree().get_first_node_in_group("noise")
+	noise.connect("noise_limit", self._game_over_overlay)
 
 # Calculate the current distance between player and baby
 func calc_noise_meter_value():
