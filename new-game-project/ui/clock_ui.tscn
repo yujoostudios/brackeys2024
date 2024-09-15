@@ -9,6 +9,7 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_vw5iy")
+startSeconds = 45
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

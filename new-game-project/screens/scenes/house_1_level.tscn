@@ -1106,13 +1106,13 @@ position = Vector2(664, 896)
 position = Vector2(-192, -192)
 
 [node name="RubyRing" parent="SteablleItemsTop" instance=ExtResource("28_ivcle")]
-position = Vector2(1056, -160)
+position = Vector2(1040, -160)
 
 [node name="RubyRing3" parent="SteablleItemsTop" instance=ExtResource("28_ivcle")]
 position = Vector2(1096, -160)
 
 [node name="RubyRing4" parent="SteablleItemsTop" instance=ExtResource("28_ivcle")]
-position = Vector2(1136, -160)
+position = Vector2(1152, -160)
 
 [node name="Computer" parent="SteablleItemsTop" instance=ExtResource("23_3y62m")]
 position = Vector2(-608, 256)
