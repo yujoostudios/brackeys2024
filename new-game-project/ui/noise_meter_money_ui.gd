@@ -3,13 +3,15 @@ extends Control
 var total_value = 0
 const MONEY_OBJECTIVE = 10000
 # Called when the node enters the scene tree for the first time.
-
+signal noise_limit
 func _ready() -> void:
 	set_money_objective()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Receive signal from Player (whenever they walk type shit)
+	if $ProgressBar.value == 100:
+		emit_signal("noise_limit")
 	var houses = get_tree().get_nodes_in_group("house")
 	for house in houses:
 		house.connect("send_noise_value", self.calc_noise_meter_color)
