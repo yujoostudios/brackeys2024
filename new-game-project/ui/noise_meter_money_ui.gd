@@ -10,9 +10,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Receive signal from Player (whenever they walk type shit)
-	var house1level = get_tree().get_first_node_in_group("house")
-	house1level.connect("send_noise_value", self.calc_noise_meter_color)
+	var houses = get_tree().get_nodes_in_group("house")
+	for house in houses:
+		house.connect("send_noise_value", self.calc_noise_meter_color)
 	
+	var player = get_tree().get_first_node_in_group("player")
+	player.connect("dash_noise", self.add_noise_meter_color)
+	player.connect("walk_noise", self.add_noise_meter_color)
+	player.connect("stand_noise", self.add_noise_meter_color)
 	var items = get_tree().get_nodes_in_group("items")
 	for item in items:
 		item.connect("money_change", self._update_money)
@@ -25,6 +30,17 @@ func calc_noise_meter_color(value : int):
 	if value > 75 && value < 90:
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.89, 0.4, 0.2)
 	elif value >= 90:
+		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.75686274509, 0.20392156862, 0.10588235294)
+	else:
+		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.06274509803, 0.58431372549, 0.52156862745)
+
+func add_noise_meter_color(value : int):
+	print(value)
+	$ProgressBar.value = $ProgressBar.value + value
+	#print($ProgressBar.value)
+	if $ProgressBar.value > 75 && $ProgressBar.value < 90:
+		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.89, 0.4, 0.2)
+	elif $ProgressBar.value >= 90:
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.75686274509, 0.20392156862, 0.10588235294)
 	else:
 		$ProgressBar.get("theme_override_styles/fill").bg_color = Color(0.06274509803, 0.58431372549, 0.52156862745)

@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 @export var speed := 150
+@export var dashnoise = 0
+@export var walknoise = 0
+@export var standnoise = 0
 @onready var animations = $AnimationPlayer
 var ydirection = "Down"
 var xdirection = "Right"
@@ -11,6 +14,10 @@ var dashing = false
 var can_dash = true
 var can_move = true
 var level_entered = false
+
+signal dash_noise
+signal walk_noise
+signal stand_noise
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -44,6 +51,12 @@ func _process(delta: float) -> void:
 		if dashing:
 			velocity = direction * dash_speed
 		else: 
+			$DashTimer.stop()
+			#print(direction.is_zero_approx())
+			if direction.is_zero_approx() == false:		
+				$StandTimer.start()
+			else:
+				$WalkTimer.start()
 			velocity = direction * speed
 		move_and_slide()
 		updateAnimation()
@@ -66,14 +79,17 @@ func updateAnimation():
 		animations.play("Walk" + ydirection + xdirection)
 		
 func _stop_movement_flag(flag : bool):
-	print(flag)
+	#print(flag)
 	can_move = false
 
 func _on_dash_timer_timeout() -> void:
+	#print('dashed')
+	emit_signal("dash_noise", dashnoise)
 	dashing = false
 
 func _on_can_dash_timer_timeout() -> void:
 	can_dash = true
+	
 	
 func _speed_powerup_activated():
 	$SpeedPowerUpTimer.start()
@@ -86,3 +102,11 @@ func _on_speed_power_up_timer_timeout() -> void:
 	dash_speed -= 200
 	speed -= 200
 	$SpeedPowerUpTimer.stop()
+
+
+func _on_walk_timer_timeout() -> void:
+	emit_signal("walk_noise", walknoise)
+
+
+func _on_stand_timer_timeout() -> void:
+	emit_signal("stand_noise" , standnoise)
