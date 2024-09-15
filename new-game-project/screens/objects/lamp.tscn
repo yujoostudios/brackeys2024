@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtoojcxa7476f"]
+
+[ext_resource type="Texture2D" uid="uid://dewpus8cii5fs" path="res://assets/art/furniture/Lamp.png" id="1_kla32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb5mc"]
+size = Vector2(64, 33)
+
+[node name="Lamp" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kla32")
+offset = Vector2(0, -45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 8.5)
+shape = SubResource("RectangleShape2D_eb5mc")

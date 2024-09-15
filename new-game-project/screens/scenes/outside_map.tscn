@@ -1,12 +1,14 @@
-[gd_scene load_steps=14 format=4 uid="uid://cw10udmiqn8co"]
+[gd_scene load_steps=16 format=4 uid="uid://cw10udmiqn8co"]
 
 [ext_resource type="Texture2D" uid="uid://ddh1jgfgedkow" path="res://assets/art/outside-map-bg.png" id="1_8gcjk"]
+[ext_resource type="Script" path="res://scripts/outside_map.gd" id="1_d6jcg"]
 [ext_resource type="Texture2D" uid="uid://bk3isldq4ft4g" path="res://assets/art/tilemaps/grass-accents-tilemap.png" id="2_5iekm"]
 [ext_resource type="PackedScene" uid="uid://bbj54lidvkpip" path="res://screens/objects/house_1.tscn" id="2_85k0c"]
 [ext_resource type="Texture2D" uid="uid://oej3d0f2jqjs" path="res://assets/art/tilemaps/stone-path-tilemap.png" id="3_fl78t"]
 [ext_resource type="PackedScene" uid="uid://d01luah7ejh3g" path="res://screens/objects/player.tscn" id="3_uefh5"]
 [ext_resource type="PackedScene" uid="uid://bdoe2hnpq3o8c" path="res://screens/objects/house_2.tscn" id="5_j7er6"]
 [ext_resource type="PackedScene" uid="uid://c25kv35tdq1ra" path="res://screens/objects/shrub_night.tscn" id="7_ik5ar"]
+[ext_resource type="PackedScene" uid="uid://bo8rl0lxafbjp" path="res://screens/objects/sneaking_audio.tscn" id="8_ilhqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iig0"]
 size = Vector2(1280, 29)
@@ -70,6 +72,7 @@ sources/0 = SubResource("TileSetAtlasSource_oxqnq")
 
 [node name="OutsideMap" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_d6jcg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -133,3 +136,5 @@ position = Vector2(240, 368)
 
 [node name="Shrub2" parent="." instance=ExtResource("7_ik5ar")]
 position = Vector2(1112, 512)
+
+[node name="SneakingAudio" parent="." instance=ExtResource("8_ilhqy")]
