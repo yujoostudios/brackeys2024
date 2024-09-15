@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo8rl0lxafbjp"]
+
+[ext_resource type="AudioStream" uid="uid://da2ovdnv0cw7t" path="res://assets/music/sneaking-music.mp3" id="1_ie020"]
+[ext_resource type="Script" path="res://scripts/sneaking_audio.gd" id="2_kf5a4"]
+
+[node name="SneakingAudio" type="AudioStreamPlayer2D"]
+position = Vector2(952, -168)
+stream = ExtResource("1_ie020")
+pitch_scale = 0.95
+autoplay = true
+max_distance = 4000.0
+parameters/looping = true
+script = ExtResource("2_kf5a4")
